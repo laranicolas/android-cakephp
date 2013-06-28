@@ -1,0 +1,551 @@
+html {
+	overflow-y: scroll;
+}
+
+ol, ul {
+	list-style: none outside none;
+	padding: 0;
+}
+
+ul, li {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+img.ui-datepicker-trigger {
+	margin-bottom: 10px;
+	margin-left: 5px; 
+}
+
+/* Pins Module & Bullet icons */
+/*(Flag: image-general-sprites)*/
+.pin-s, .pin-m, .pin-l, .bullet-icon {display: block; background-image: url('/img/webart/sprites-off.png');}
+.pin-hover:hover {background-image: url('/img/webart/sprites-on.png')}
+.pin-selected, .bullet-icon-selected {background-image: url('/img/webart/sprites-on.png')}
+
+.pin-s, .bullet-icon {width: 16px; height: 16px;}
+.pin-m {width: 24px; height: 24px;}
+.pin-l {width: 32px; height: 32px;}
+.pin-review {background-position: 0 0}
+.pin-image {background-position: -16px 0}
+.pin-video {background-position: -32px 0}
+.pin-event {background-position: -48px 0}
+.pin-phone {background-position: -64px 0}
+.pin-coupon {background-position: -80px 0}
+.pin-featured {background-position: -96px 0}
+.pin-map {background-position: -112px 0}
+.pin-star-1 {background-position: -128px 0}
+.pin-star-2 {background-position: -144px 0}
+.pin-star-3 {background-position: -160px 0}
+.pin-star-4 {background-position: -176px 0}
+.pin-star-5 {background-position: -192px 0}
+.pin-map-driving {background-position: -208px 0}
+.pin-map-walking {background-position: -224px 0}
+
+.bullet-icon-0 {background-position: 0 -72px}
+.bullet-icon-1 {background-position: -16px -72px}
+.bullet-icon-2 {background-position: -32px -72px}
+.bullet-icon-3 {background-position: -48px -72px}
+.bullet-icon-4 {background-position: -64px -72px}
+.bullet-icon-5 {background-position: -80px -72px}
+.bullet-icon-6 {background-position: -96px -72px}
+.bullet-icon-7 {background-position: -112px -72px}
+.bullet-icon-8 {background-position: -128px -72px}
+.bullet-icon-9 {background-position: -144px -72px}
+.bullet-icon-10 {background-position: -160px -72px}
+.bullet-icon-11 {background-position: -176px -72px}
+.bullet-icon-12 {background-position: -192px -72px}
+.bullet-icon-13 {background-position: -208px -72px}
+.bullet-icon-14 {background-position: -224px -72px}
+.bullet-icon-15 {background-position: -240px -72px}
+.bullet-icon-16 {background-position: -256px -72px}
+.bullet-icon-17 {background-position: -272px -72px}
+.bullet-icon-18 {background-position: -288px -72px}
+.bullet-icon-19 {background-position: -304px -72px}
+.bullet-icon-20 {background-position: -320px -72px}
+.bullet-icon-21 {background-position: -336px -72px}
+.bullet-icon-22 {background-position: -352px -72px}
+.bullet-icon-23 {background-position: -368px -72px}
+.bullet-icon-24 {background-position: -384px -72px}
+.bullet-icon-25 {background-position: -400px -72px}
+.bullet-icon-26 {background-position: -416px -72px}
+.bullet-icon-27 {background-position: -432px -72px}
+.bullet-icon-28 {background-position: -448px -72px}
+.bullet-icon-29 {background-position: -464px -72px}
+.bullet-icon-30 {background-position: -480px -72px}
+.bullet-icon-31 {background-position: -496px -72px}
+.bullet-icon-32 {background-position: -512px -72px}
+
+/* Slim Small Arrows */
+.ss-arrow-left-1,
+.ss-arrow-left-2,
+.ss-arrow-left-3,
+.ss-arrow-right-1,
+.ss-arrow-right-2,
+.ss-arrow-right-3
+{
+	background-image: url('/img/webart/sprites-ss-arrow.png');
+	width: 16px;
+	height: 28px;
+}
+.ss-arrow-left-1 {background-position: 0 0}
+.ss-arrow-left-2 {background-position: -32px 0}
+.ss-arrow-left-3 {background-position: -64px 0}
+.ss-arrow-right-1 {background-position: -16px 0}
+.ss-arrow-right-2 {background-position: -48px 0}
+.ss-arrow-right-3 {background-position: -80px 0}
+
+/* Slim Medium Arrows */
+.sm-arrow-left-1,
+.sm-arrow-left-2,
+.sm-arrow-left-3,
+.sm-arrow-right-1,
+.sm-arrow-right-2,
+.sm-arrow-right-3
+{
+	background-image: url('/img/webart/sprites-sm-arrow.png');
+	width: 32px;
+	height: 52px;
+}
+.sm-arrow-left-1 {background-position: 0 0}
+.sm-arrow-left-2 {background-position: -64px 0}
+.sm-arrow-left-3 {background-position: -128px 0}
+.sm-arrow-right-1 {background-position: -32px 0}
+.sm-arrow-right-2 {background-position: -96px 0}
+.sm-arrow-right-3 {background-position: -160px 0}
+
+/* General Styles */
+.clear {clear:both}
+.cll {clear:left}
+.clr {clear:right}
+
+.bold {font-weight:bold}
+
+.tac {text-align:center}
+.tal {text-align:left}
+.tar {text-align:right}
+
+.none {display:none}
+.inline {display:inline}
+.block {display:block}
+.inline-block {display:inline-block}
+
+.left {float:left}
+.right {float:right}
+
+.visible {visibility:visible}
+.invisible {visibility:hidden}
+
+/* General Sprites */
+.sprites {background-image: url('/img/webart/sprites.png')}
+
+/* i18n Sprites */
+.sprites-cc {background-image: url('/img/webart/sprites-es_AR.png')}
+.glbr .sprites-cc {background-image: url('/img/webart/sprites-pt_BR.png')}
+.glpt .sprites-cc {background-image: url('/img/webart/sprites-pt_PT.png')}
+
+/* Bookmarks */
+.bookmark {
+	background-position: -86px 0;
+	width: 13px;
+	height: 12px;
+	margin: 2px;
+	display: inline-block;
+	cursor: pointer;
+}
+	.bookmark-on {
+		background-position: -125px 0;
+	}
+	.bookmark:hover {
+		background-position: -99px 0;
+	}
+	.bookmark-on:hover {
+		background-position: -138px 0;
+	}
+
+/* Shadows */
+.boxshadow .shadowed {  /* for supported browsers, only */
+	-moz-box-shadow: 0px 0px 20px #ddd;
+	-webkit-box-shadow: 0px 0px 20px #ddd;
+	box-shadow: 0px 0px 20px #ddd;
+}
+.boxshadow .shadowed-deep {  /* for supported browsers, only */
+	-moz-box-shadow: 1px 1px 3px #bbb;
+	-webkit-box-shadow: 1px 1px 3px #bbb;
+	box-shadow: 1px 1px 3px #bbb;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+/* Roundings */
+.rounded {
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.rounded-top {
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+.rounded-bottom {
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+}
+
+.rounded-big {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.rounded-big-top {
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+.rounded-big-bottom {
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+
+/* Map */
+.gl-map-simple {}
+	.gl-map-simple.gl-map-wrapper,
+	.gl-map-simple.gl-map-wrapper .gl-map
+	{
+		width: 640px;
+		height: 350px;
+	}
+	.gl-map-simple.gl-map-wrapper {
+		margin: 0 auto;
+		padding: 3px;
+		border: 1px solid #b3c1c7;
+		background: #f0ede7;
+	}
+.gl-map-complex {}
+
+.gl-map-wrapper {
+	position: relative;
+}
+	.gl-map-arrow {
+		position: absolute;
+		z-index: 901;
+	}
+	.gl-map-static {
+		position: absolute;
+		z-index: 900;
+	}
+	.gl-map {
+		position: absolute;
+	}
+	.gl-map span {}
+
+.map-marker-info {}
+	.map-marker-info img {
+		float: left;
+	}
+	.map-marker-info p {
+		margin-bottom: 10px;
+	}
+	.map-marker-info p.name {
+		font-weight: bold;
+	}
+
+/* Buttons */
+a.gl-btt-s {
+	cursor: pointer;
+	color: #fff;
+	background: #9a9a9a;
+	font-weight: bold;
+	font-size: 9px;
+	line-height: 11px;
+	padding: 3px 5px;
+	border: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+	a.gl-btt-s:visited {
+		color: #fff;
+	}
+	a.gl-btt-s:hover {
+		color: #fff;
+		background: #b8b8b8;
+	}
+a.gl-btt-l {
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 8px;
+	background: #5a707b;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+	a.gl-btt-l:visited {
+		color: #fff;
+		background: #7d9cab;
+	}
+	a.gl-btt-l:hover {
+		color: #fff;
+		background: #7d9cab;
+	}
+.gl-btt-sq {
+	cursor: pointer;
+	display: inline-block;
+	background-color: #f0ede7;
+	width: 40px;
+	height: 16px;
+	border: 1px solid #ccc;
+	margin-right: 5px;
+	padding: 5px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+	.gl-btt-sq.hover,
+	.gl-btt-sq:hover
+	{
+		border: 1px solid #bbb;
+	}
+	.gl-btt-sq.selected {
+		background-color: #ddd;
+		border: 1px solid #bbb;
+	}
+		.gl-btt-sq span {
+			display: block;
+			width: 16px;
+			height: 16px;
+			margin: 0 auto;
+			background-image: url('/img/webart/sprites-off.png');
+		}
+		.gl-btt-sq.hover span,
+		.gl-btt-sq:hover span,
+		.gl-btt-sq.selected span
+		{
+			background-image: url('/img/webart/sprites-on.png');
+		}
+
+/* Tooltip (by default the element to be styled is .tooltip)  */
+.tooltip {
+	display: none;
+/*	max-width: 280px;*/
+	max-width: 300px;
+	margin: 0;
+	padding: 10px;
+	border: 2px solid #fdbd10;
+	background: #f3f5f5;
+	font-size: 12px;
+	font-weight: normal;
+	color: #5a707b;
+	z-index: 9999;
+}
+	.tooltip span {
+		font-weight: bold;
+	}
+	.tooltip .featured {
+		color: #c73e14;
+		font-size: smaller;
+	}
+
+/* Paging */
+div.paging {}
+	div.paging .disabled {
+		display: none;
+	}
+
+/** Notices and Errors **/
+div.message,
+div.debug-message
+{
+	color: #fff;
+	font-size: 140%;
+	font-weight: bold;
+	margin: 0;
+	background: #4B6EFF;
+	padding: 10px 0;
+	width: 100%;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+	div.message {
+		text-align: center;
+	}
+	div.debug-message {
+		font-size: 12px;
+		text-align: left;
+		color: #000;
+		background: #f0f0f0;
+	}
+div.error-message {
+	color: #c73e14;
+	background: transparent;
+	padding: 3px 0 0 5px;
+	font-weight: normal;
+}
+
+/* Jquery UI Dialog */
+.ui-dialog-info.ui-dialog,
+.ui-dialog-info.ui-dialog .ui-dialog-content
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+.ui-dialog-info.ui-dialog .ui-dialog-titlebar {
+	display: none;
+}
+
+
+/* Width */
+.w100, .text.w100, div.w100, form div.w100 {width:100%}
+.w95, .text.w95, div.w95, form div.w95 {width:95%}
+.w90, .text.w90, div.w90, form div.w90 {width:90%}
+.w85, .text.w85, div.w85, form div.w85 {width:85%}
+.w80, .text.w80, div.w80, form div.w80 {width:80%}
+.w75, .text.w75, div.w75, form div.w75 {width:75%}
+.w70, .text.w70, div.w70, form div.w70 {width:70%}
+.w65, .text.w65, div.w65, form div.w65 {width:65%}
+.w60, .text.w60, div.w60, form div.w60 {width:60%}
+.w55, .text.w55, div.w55, form div.w55 {width:55%}
+.w50, .text.w50, div.w50, form div.w50 {width:50%}
+.w45, .text.w45, div.w45, form div.w45 {width:45%}
+.w40, .text.w40, div.w40, form div.w40 {width:40%}
+.w35, .text.w35, div.w35, form div.w35 {width:35%}
+.w30, .text.w30, div.w30, form div.w30 {width:30%}
+.w25, .text.w25, div.w25, form div.w25 {width:25%}
+.w20, .text.w20, div.w20, form div.w20 {width:20%}
+.w15, .text.w15, div.w15, form div.w15 {width:15%}
+.w10, .text.w10, div.w10, form div.w10 {width:10%}
+.w5, .text.w5, div.w5, form div.w5 {width:5%}
+
+/* Padding */
+.pan {padding:0}
+.pas {padding:5px}
+.pam {padding:10px}
+.pal {padding:15px}
+.paxl {padding:20px}
+.ptn {padding-top:0}
+.pts {padding-top:5px}
+.ptm {padding-top:10px}
+.ptl {padding-top:15px}
+.ptxl {padding-top:20px}
+.prn {padding-right:0}
+.prs {padding-right:5px}
+.prm {padding-right:10px}
+.prl {padding-right:15px}
+.prxl {padding-right:20px}
+.pbn {padding-bottom:0}
+.pbs {padding-bottom:5px}
+.pbm {padding-bottom:10px}
+.pbl {padding-bottom:15px}
+.pbxl {padding-bottom:20px}
+.pln {padding-left:0}
+.pls {padding-left:5px}
+.plm {padding-left:10px}
+.pll {padding-left:15px}
+.plxl {padding-left:20px}
+.phn {padding-left:0;padding-right:0}
+.phs {padding-left:5px;padding-right:5px}
+.phm {padding-left:10px;padding-right:10px}
+.phl {padding-left:15px;padding-right:15px}
+.phxl {padding-left:20px;padding-right:20px}
+.pvn {padding-top:0;padding-bottom:0}
+.pvs {padding-top:5px;padding-bottom:5px}
+.pvm {padding-top:10px;padding-bottom:10px}
+.pvl {padding-top:15px;padding-bottom:15px}
+.pvxl {padding-top:20px;padding-bottom:20px}
+
+/* Margin */
+.man {margin:0}
+.mas {margin:5px}
+.mam {margin:10px}
+.mal {margin:15px}
+.maxl {margin:20px}
+.mtn {margin-top:0}
+.mts {margin-top:5px}
+.mtm {margin-top:10px}
+.mtl {margin-top:15px}
+.mtxl {margin-top:20px}
+.mrn {margin-right:0}
+.mrs {margin-right:5px}
+.mrm {margin-right:10px}
+.mrl {margin-right:15px}
+.mrxl {margin-right:20px}
+.mbn {margin-bottom:0}
+.mbs {margin-bottom:5px}
+.mbm {margin-bottom:10px}
+.mbl {margin-bottom:15px}
+.mbxl {margin-bottom:20px}
+.mln {margin-left:0}
+.mls {margin-left:5px}
+.mlm {margin-left:10px}
+.mll {margin-left:15px}
+.mlxl {margin-left:20px}
+.mhn {margin-left:0;margin-right:0}
+.mhs {margin-left:5px;margin-right:5px}
+.mhm {margin-left:10px;margin-right:10px}
+.mhl {margin-left:15px;margin-right:15px}
+.mhxl {margin-left:20px;margin-right:20px}
+.mvn {margin-top:0;margin-bottom:0}
+.mvs {margin-top:5px;margin-bottom:5px}
+.mvm {margin-top:10px;margin-bottom:10px}
+.mvl {margin-top:15px;margin-bottom:15px}
+.mvxl {margin-top:20px;margin-bottom:20px}
+
+.isOk {
+	display: inline-block;
+	width: 19px;
+	height: 17px;
+	vertical-align: middle;
+	background-image:url('/img/webart/glyphicons-halflings.png');
+	background-position: -286px 0px;
+}
+
+.login-box {
+	width: 449px;
+	margin: 0 auto;
+}
+
+/* Image gallery */
+.image-gallery li {
+	position: relative;
+	float: left;
+	margin: 0 7px 7px 0;
+}
+
+.image-icon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 1px;
+	z-index: 1;
+}
+.image-profile li {
+	position: relative;
+	float: left;
+}
+
+ #stickyToolbar.sticky {
+	position:fixed;
+	top:40px;
+	left:0px;
+	right:0px;
+	z-index:99999;
+	background-color: white;
+	padding: 10px;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+/* Format Bootstrap */
+input[type=checkbox] {
+	float: center;
+	width: auto;
+}

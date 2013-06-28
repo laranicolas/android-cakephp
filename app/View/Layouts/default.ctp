@@ -17,46 +17,47 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __('SMS Cpanel');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+		<?=$cakeDescription?>:
+		<?=$title_for_layout?>
 	</title>
-	<?php
-		echo $this->Html->meta('icon');
+	<?=$this->Html->charset()?>
+	<?=$this->Html->meta('icon')?>
+	<?=$this->fetch('meta')?>
 
-		echo $this->Html->css('cake.generic');
+	<?=$this->Html->css(array(
+		'cake.generic',
+		'bootstrap/bootstrap',
+		'general'
+	))?>
+	<?=$this->fetch('css')?>
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
+	<?=$this->Html->script(array(
+		'jquery/jquery-1.9.1',
+		'jquery/jquery-ui-1.10.3.custom.min',
+		'jquery/general',
+		'bootstrap/bootstrap',
+		'jquery/jquery.cluetip/jquery.cluetip.min',                             // complex tooltips
+	))?>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<?=$this->element('navbar', array('authUser' => $authUser)); ?>
 		</div>
 		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
+			<div class="mbm"><?=$this->element('flash')?></div>
+			<?=$this->fetch('content');?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
+			
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?=$this->fetch('script')?>
 </body>
 </html>

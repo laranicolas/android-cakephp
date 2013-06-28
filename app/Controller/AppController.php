@@ -31,5 +31,52 @@ App::uses('Controller', 'Controller');
  * @package		app.Controller
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
+
 class AppController extends Controller {
+
+	public $components = array(
+		'Acl',
+		'Auth' => array(
+			'authorize' => array(
+				'Actions' => array('actionPath' => 'controllers')
+			)
+		),
+		'Session'
+	);
+	public $helpers = array('Html', 'Form', 'Session');
+
+	public function beforeFilter() {
+		// $this->Auth->allow();	
+		//Configure AuthComponent
+		$this->Auth->loginAction = array(
+			'controller' => 'users',
+			'action' => 'login'
+		);
+		$this->Auth->logoutRedirect = array(
+			'controller' => 'users',
+			'action' => 'login'
+		);
+		$this->Auth->loginRedirect = array(
+			'controller' => 'pages',
+			'action' => 'display'
+		);
+	}
+
+	public function beforeRender() {
+		// Auth'ed user
+		if ($authUser = AuthComponent::user()) {
+			$this->set('authUser', $authUser);
+		}
+	}
+
+	protected function _truncate ($string, $limit, $break = " ", $pad = "…") { 
+		if (strlen($string) <= $limit) 
+			return $string; 
+		if (($breakpoint = strpos($string, $break, $limit)) !== false ) { 
+			if ($breakpoint < strlen($string) - 1) { 
+				$string = substr($string, 0, $breakpoint) . $pad; 
+			}
+		}
+		return $string; 
+	}
 }

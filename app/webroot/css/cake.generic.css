@@ -79,7 +79,7 @@ p {
 }
 
 #header{
-	padding: 10px 20px;
+	padding: 20px 20px;
 }
 #header h1 {
 	line-height:20px;
@@ -100,10 +100,8 @@ p {
 }
 #content{
 	background: #fff;
-	clear: both;
 	color: #333;
 	padding: 10px 20px 40px 20px;
-	overflow: auto;
 }
 #footer {
 	clear: both;
@@ -115,21 +113,8 @@ p {
 div.form,
 div.index,
 div.view {
-	float:right;
-	width:76%;
-	border-left:1px solid #666;
-	padding:10px 2%;
+	/*padding:15px 2%;*/
 }
-div.actions {
-	float:left;
-	width:16%;
-	padding:10px 1.5%;
-}
-div.actions h3 {
-	padding-top:0;
-	color:#777;
-}
-
 
 /** Tables **/
 table {
@@ -142,7 +127,7 @@ table {
 th {
 	border:0;
 	border-bottom:2px solid #555;
-	text-align: left;
+	text-align: center;
 	padding:4px;
 }
 th a {
@@ -158,7 +143,7 @@ th a.desc:after {
 }
 table tr td {
 	padding: 6px;
-	text-align: left;
+	text-align: center;
 	vertical-align: top;
 	border-bottom:1px solid #ddd;
 }
@@ -204,7 +189,6 @@ table td.actions a {
 .paging > span {
 	display: inline-block;
 	border: 1px solid #ccc;
-	border-left: 0;
 }
 .paging > span:hover {
 	background: #efefef;
@@ -232,26 +216,12 @@ table td.actions a {
 }
 
 /** Scaffold View **/
-dl {
-	line-height: 2em;
-	margin: 0em 0em;
-	width: 60%;
-}
+/*dl {
+	width: 30%;
+}*/
 dl dd:nth-child(4n+2),
 dl dt:nth-child(4n+1) {
 	background: #f4f4f4;
-}
-
-dt {
-	font-weight: bold;
-	padding-left: 4px;
-	vertical-align: top;
-	width: 10em;
-}
-dd {
-	margin-left: 10em;
-	margin-top: -2em;
-	vertical-align: top;
 }
 
 /** Forms **/
@@ -267,7 +237,7 @@ fieldset {
 	padding: 16px 10px;
 }
 fieldset legend {
-	color: #e32;
+	color: #5F74F2;
 	font-size: 160%;
 	font-weight: bold;
 }
@@ -285,7 +255,6 @@ fieldset fieldset div {
 }
 form div {
 	clear: both;
-	margin-bottom: 1em;
 	padding: .5em;
 	vertical-align: text-top;
 }
@@ -310,12 +279,10 @@ label {
 	font-size: 110%;
 	margin-bottom:3px;
 }
-input, textarea {
-	clear: both;
-	font-size: 140%;
-	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
+#PostText {
+/*	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;*/
 	padding: 1%;
-	width:98%;
+	width: 35%;
 }
 select {
 	clear: both;
@@ -335,8 +302,8 @@ input[type=checkbox] {
 	margin: 0px 6px 7px 2px;
 	width: auto;
 }
-div.checkbox label {
-	display: inline;
+div.checkbox {
+	margin-left: 10px;
 }
 input[type=radio] {
 	float:left;
@@ -355,17 +322,15 @@ input[type=submit] {
 	width: auto;
 }
 form .submit input[type=submit] {
-	background:#62af56;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230));
-	background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230);
-	background-image: -moz-linear-gradient(top, #76BF6B, #3B8230);
-	border-color: #2d6324;
-	color: #fff;
-	text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px;
-	padding: 8px 10px;
+	background-color: #5BB75B;
+	background-image: linear-gradient(to bottom, #62C462, #51A351);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
 }
 form .submit input[type=submit]:hover {
-	background: #5BA150;
+	background: #5EB15E;
 }
 /* Form errors */
 form .error {

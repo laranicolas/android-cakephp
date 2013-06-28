@@ -1,0 +1,54 @@
+/* Multiselect
+----------------------------------*/
+
+.ui-multiselect { border: solid 1px; font-size: 0.8em; }
+.ui-multiselect ul { -moz-user-select: none; }
+.ui-multiselect li { margin: 0; padding: 0; cursor: default; line-height: 20px; height: 20px; font-size: 11px; list-style: none; overflow: hidden; }
+.ui-multiselect li a { color: #999; text-decoration: none; padding: 0 0 0 20px; display: block; float: left; cursor: pointer;}
+.ui-multiselect li.ui-draggable-dragging { padding-left: 10px; }
+
+.ui-multiselect div.selected { position: relative; padding: 0; margin: 0; border: 0; float:left; }
+.ui-multiselect ul.selected { position: relative; padding: 0; overflow: auto; overflow-x: hidden; background: #fff; margin: 0; list-style: none; border: 0; width: 100%; }
+.ui-multiselect ul.selected li { padding-left: 10px; }
+
+.ui-multiselect div.available { position: relative; padding: 0; margin: 0; border: 0; float:left; }
+.ui-multiselect ul.available { position: relative; padding: 0; overflow: auto; overflow-x: hidden; background: #fff; margin: 0; list-style: none; border: 0; width: 100%; }
+.ui-multiselect ul.available li { padding-left: 10px; }
+ 
+.ui-multiselect .ui-state-default { border: none; margin-bottom: 1px; position: relative; padding-left: 20px;}
+.ui-multiselect .ui-state-hover { border: none; }
+
+.ui-multiselect .ui-widget-header { border: none; font-size: 11px; height: 29px; }
+ 
+.ui-multiselect .search { float:left; padding:1px;}
+.ui-multiselect .count { float:left; padding:7px; }
+
+
+/*.ui-multiselect li span.ui-icon-arrowthick-2-n-s { position: absolute; left: 2px; }*/
+.ui-multiselect li { cursor:pointer; }
+.ui-multiselect li span { position: absolute; right: 2px; top: 2px; }
+ 
+.ui-multiselect input.search { height:16px; /*padding:1px;*/ opacity:0.5; margin:4px; padding-right:25px; width:55%; }
+.ui-multiselect span.searchIcon { float:left; position:relative; top:6px; left:-25px; padding:0; }
+
+
+/*.ui-multiselect .loadingSmall { float:left; display:inline; visibility:hidden; margin:6px 2px 0; width:15px; height:15px; background:url(./images/ajax-loadingSmall.gif) no-repeat scroll 0 0; }*/
+.ui-multiselect .loadingBig { position:absolute; z-index:999; visibility:hidden; margin:0; padding:0; }
+
+
+/* multiselect */
+#msAddAll { float:right; padding:7px; }
+#msRemoveAll { float:right; padding:7px; }
+#msItemData { width:90%; margin:5px 0; padding:0; }
+	#msItemData label { color:#000; }
+	#msItemName { width:100%; margin:0 0 10px; padding:0; }
+		#msItemName input#aItemSlug{ margin-left:10px; }
+	#msItemState { width:100%; margin:0 0 10px; padding:0; }
+		input#aItemFlag { width:20px; margin:0; vertical-align:middle; }
+		span#aItemFlagTxt { display:inline-block; visibility:hidden; padding-left:10px; color:#CD0A0A; vertical-align:middle;}
+#msActions { width:100%; padding:0; }
+
+
+/* multiselect stripped */
+#mssAddItem { float:left; padding:7px; }
+#mssDeleteItem { float:right; padding:7px; }
