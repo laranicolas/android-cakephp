@@ -144,7 +144,8 @@
 	width: 49%;
 }
 .ui-datepicker table {
-	width: 100%;
+	max-width: none;
+	width: 0%;
 	font-size: .9em;
 	border-collapse: collapse;
 	margin: 0 0 .4em;

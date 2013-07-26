@@ -10,7 +10,7 @@
 		timezoneText: 'Huso horario',
 		currentText: 'Ahora',
 		closeText: 'Cerrar',
-		timeFormat: 'hh',
+		timeFormat: 'HH',
 		ampm: false
 	};
 	$.timepicker.setDefaults($.timepicker.regional['es']);

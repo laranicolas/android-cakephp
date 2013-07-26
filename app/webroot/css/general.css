@@ -387,8 +387,10 @@ div.debug-message
 div.error-message {
 	color: #c73e14;
 	background: transparent;
-	padding: 3px 0 0 5px;
+	padding: 0px 0 0 3px;
 	font-weight: normal;
+	clear: both;
+	font-size: 13px;
 }
 
 /* Jquery UI Dialog */
@@ -510,7 +512,7 @@ div.error-message {
 }
 
 .login-box {
-	width: 449px;
+	width: 475px;
 	margin: 0 auto;
 }
 
