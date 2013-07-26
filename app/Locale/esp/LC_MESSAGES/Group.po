@@ -1,0 +1,71 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-06-29 19:53-0300\n"
+"PO-Revision-Date: 2013-06-29 20:33-0300\n"
+"Last-Translator: nlara <nlara@guialocal.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/GroupsController.php:33;65;90
+msgid "Invalid group"
+msgstr "Grupo Inválido"
+
+#: Controller/GroupsController.php:48;69
+msgid "The group has been saved"
+msgstr "El grupo se guardo correctamente"
+
+#: Controller/GroupsController.php:51;72
+msgid "The group could not be saved. Please, try again."
+msgstr "El grupo no pudo ser guardado. Por favor, intenta de nuevo."
+
+#: Controller/GroupsController.php:94
+msgid "Group deleted"
+msgstr "Grupo eliminado"
+
+#: Controller/GroupsController.php:97
+msgid "Group was not deleted"
+msgstr "El grupo no pudo eliminarse"
+
+#: View/Groups/add.ctp:4
+msgid "Add Group"
+msgstr "Agregar Grupo"
+
+#: View/Groups/edit.ctp:4
+msgid "Edit Group"
+msgstr "Editar Grupo"
+
+#: View/Groups/index.ctp:4
+msgid "Groups"
+msgstr "Grupos"
+
+#: View/Groups/index.ctp:5
+msgid "New Group"
+msgstr "Nuevo Grupo"
+
+#: View/Groups/view.ctp:2
+msgid "Group"
+msgstr "Grupo"
+
+#: View/Groups/view.ctp:4
+msgid "Id"
+msgstr "Id"
+
+#: View/Groups/view.ctp:9
+msgid "Name"
+msgstr "Nombre"
+
+#: View/Groups/view.ctp:14
+msgid "Created"
+msgstr "Creado"
+
+#: View/Groups/view.ctp:19
+msgid "Modified"
+msgstr "Modificado"
+

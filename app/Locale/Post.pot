@@ -1,0 +1,125 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-23 19:21-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/PostsController.php:42;76;104
+msgid "Invalid post"
+msgstr ""
+
+#: Controller/PostsController.php:57;81
+msgid "The post has been saved"
+msgstr ""
+
+#: Controller/PostsController.php:60;84
+msgid "The post could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PostsController.php:108
+msgid "Post deleted"
+msgstr ""
+
+#: Controller/PostsController.php:111
+msgid "Post was not deleted"
+msgstr ""
+
+#: View/Campaigns/view.ctp:47
+msgid "Related Posts"
+msgstr ""
+
+#: View/Campaigns/view.ctp:51
+#: View/Posts/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/Campaigns/view.ctp:52
+#: View/Posts/add.ctp:13
+#: View/Posts/edit.ctp:14
+#: View/Posts/index.ctp:12
+#: View/Posts/view.ctp:14
+msgid "Text"
+msgstr ""
+
+#: View/Campaigns/view.ctp:53
+#: View/Posts/add.ctp:18
+#: View/Posts/edit.ctp:19
+#: View/Posts/index.ctp:13
+#: View/Posts/view.ctp:19
+msgid "start_date"
+msgstr ""
+
+#: View/Campaigns/view.ctp:54
+#: View/Posts/index.ctp:14
+#: View/Posts/view.ctp:24
+msgid "Created"
+msgstr ""
+
+#: View/Campaigns/view.ctp:55
+#: View/Posts/index.ctp:15
+#: View/Posts/view.ctp:29
+msgid "Modified"
+msgstr ""
+
+#: View/Campaigns/view.ctp:98
+#: View/Posts/index.ctp:5
+msgid "New Post"
+msgstr ""
+
+#: View/Posts/add.ctp:6
+msgid "Add Post"
+msgstr ""
+
+#: View/Posts/add.ctp:8
+#: View/Posts/edit.ctp:9
+#: View/Posts/index.ctp:11
+#: View/Posts/view.ctp:9
+msgid "Campaign"
+msgstr ""
+
+#: View/Posts/edit.ctp:6
+msgid "Edit Post"
+msgstr ""
+
+#: View/Posts/index.ctp:4
+msgid "Posts"
+msgstr ""
+
+#: View/Posts/index.ctp:10
+msgid "id"
+msgstr ""
+
+#: View/Posts/view.ctp:2
+msgid "Post"
+msgstr ""
+
+#: Model/Post.php:validation for field id
+msgid "numeric"
+msgstr ""
+
+#: Model/Post.php:validation for field campaign_id
+msgid "Select a campaign."
+msgstr ""
+
+#: Model/Post.php:validation for field text
+msgid "Write a message."
+msgstr ""
+
+#: Model/Post.php:validation for field text
+msgid "Signature must be no larger than 140 characters long."
+msgstr ""
+
+#: Model/Post.php:validation for field start_date
+msgid "Add a valid date dd/mm/yyyy."
+msgstr ""
+

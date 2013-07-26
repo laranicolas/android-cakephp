@@ -1,0 +1,124 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-06-29 19:53-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/PatientsController.php:31;70;95
+msgid "Invalid patient"
+msgstr ""
+
+#: Controller/PatientsController.php:53;74
+msgid "The patient has been saved"
+msgstr ""
+
+#: Controller/PatientsController.php:56;77
+msgid "The patient could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PatientsController.php:99
+msgid "Patient deleted"
+msgstr ""
+
+#: Controller/PatientsController.php:102
+msgid "Patient was not deleted"
+msgstr ""
+
+#: View/Patients/add.ctp:16
+msgid "Add Patient"
+msgstr ""
+
+#: View/Patients/add.ctp:20
+#: View/Patients/edit.ctp:31
+#: View/Patients/view.ctp:19
+msgid "Code"
+msgstr ""
+
+#: View/Patients/add.ctp:21
+#: View/Patients/edit.ctp:32
+#: View/Patients/view.ctp:24
+msgid "Cellular"
+msgstr ""
+
+#: View/Patients/edit.ctp:24
+msgid "Edit Patient"
+msgstr ""
+
+#: View/Patients/index.ctp:4
+msgid "Patients"
+msgstr ""
+
+#: View/Patients/index.ctp:5
+msgid "New Patient"
+msgstr ""
+
+#: View/Patients/view.ctp:2
+msgid "Patient"
+msgstr ""
+
+#: View/Patients/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/Patients/view.ctp:9
+msgid "Name"
+msgstr ""
+
+#: View/Patients/view.ctp:14
+msgid "Surname"
+msgstr ""
+
+#: View/Patients/view.ctp:29
+msgid "Hour"
+msgstr ""
+
+#: View/Patients/view.ctp:34
+msgid "Created"
+msgstr ""
+
+#: View/Patients/view.ctp:39
+msgid "Modified"
+msgstr ""
+
+#: Model/Patient.php:validation for field id
+msgid "numeric"
+msgstr ""
+
+#: Model/Patient.php:validation for field name
+msgid "Only alphanumeric type for name."
+msgstr ""
+
+#: Model/Patient.php:validation for field surname
+msgid "Only alphanumeric type for surname."
+msgstr ""
+
+#: Model/Patient.php:validation for field code;validation for field cellular
+msgid "Only support numbers for the area code of patient."
+msgstr ""
+
+#: Model/Patient.php:validation for field code;validation for field cellular
+msgid "Introduce a valid number."
+msgstr ""
+
+#: Model/Patient.php:validation for field code
+msgid "Please supply four numbers for area code."
+msgstr ""
+
+#: Model/Patient.php:validation for field cellular
+msgid "Please supply nine numbers for area code."
+msgstr ""
+
+#: Model/Patient.php:validation for field hour
+msgid "Insert valid hour format to send SMS."
+msgstr ""
+

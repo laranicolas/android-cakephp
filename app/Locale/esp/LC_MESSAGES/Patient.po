@@ -1,0 +1,157 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-23 19:21-0300\n"
+"PO-Revision-Date: 2013-07-23 19:22-0300\n"
+"Last-Translator: nlara <nlara@guialocal.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/PatientsController.php:31;70;95
+msgid "Invalid patient"
+msgstr "Paciente Inválido"
+
+#: Controller/PatientsController.php:53;74
+msgid "The patient has been saved"
+msgstr "El paciente se guardo correctamente"
+
+#: Controller/PatientsController.php:56;77
+msgid "The patient could not be saved. Please, try again."
+msgstr "El paciente no pudo ser guardado. Por favor, intenta de nuevo."
+
+#: Controller/PatientsController.php:99
+msgid "Patient deleted"
+msgstr "Paciente eliminado"
+
+#: Controller/PatientsController.php:102
+msgid "Patient was not deleted"
+msgstr "El paciente no pudo eliminarse"
+
+#: View/Elements/ajax_table.ctp:43
+#: View/Patients/add.ctp:20
+#: View/Patients/edit.ctp:27
+#: View/Patients/index.ctp:11
+#: View/Patients/view.ctp:9
+msgid "Name"
+msgstr "Nombre"
+
+#: View/Elements/ajax_table.ctp:44
+#: View/Patients/add.ctp:25
+#: View/Patients/edit.ctp:32
+#: View/Patients/index.ctp:12
+#: View/Patients/view.ctp:14
+msgid "Surname"
+msgstr "Apellido"
+
+#: View/Elements/ajax_table.ctp:45
+#: View/Patients/add.ctp:31
+#: View/Patients/edit.ctp:38
+#: View/Patients/index.ctp:13
+#: View/Patients/view.ctp:19
+msgid "Code"
+msgstr "Código"
+
+#: View/Elements/ajax_table.ctp:46
+#: View/Patients/add.ctp:32
+#: View/Patients/edit.ctp:39
+#: View/Patients/index.ctp:14
+#: View/Patients/view.ctp:24
+msgid "Cellular"
+msgstr "Celular"
+
+#: View/Patients/add.ctp:18
+msgid "Add Patient"
+msgstr "Agregar Paciente"
+
+#: View/Patients/add.ctp:46
+#: View/Patients/edit.ctp:53
+#: View/Patients/index.ctp:15
+#: View/Patients/view.ctp:29
+msgid "Hour"
+msgstr "Hora de Envío"
+
+#: View/Patients/edit.ctp:24
+msgid "Edit Patient"
+msgstr "Editar Paciente"
+
+#: View/Patients/index.ctp:4
+msgid "Patients"
+msgstr "Pacientes"
+
+#: View/Patients/index.ctp:5
+msgid "New Patient"
+msgstr "Nuevo Paciente"
+
+#: View/Patients/index.ctp:10
+#: View/Patients/view.ctp:4
+msgid "Id"
+msgstr "Id"
+
+#: View/Patients/index.ctp:16
+#: View/Patients/view.ctp:34
+msgid "Created"
+msgstr "Creado"
+
+#: View/Patients/index.ctp:17
+#: View/Patients/view.ctp:39
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/Patients/view.ctp:2
+msgid "Patient"
+msgstr "Paciente"
+
+#: Model/Patient.php:validation
+#: for field id
+msgid "numeric"
+msgstr "valor numérico"
+
+#: Model/Patient.php:validation
+#: for field name
+msgid "Only alphanumeric type for name."
+msgstr "Únicamente letras y números para el nombre."
+
+#: Model/Patient.php:validation
+#: for field surname
+msgid "Only alphanumeric type for surname."
+msgstr "Únicamente letras y números para el apellido."
+
+#: Model/Patient.php:validation
+#: for field code
+msgid "Only support numbers for the area code of patient."
+msgstr "Únicamente soporta números para el código de area."
+
+#: Model/Patient.php:validation
+#: for field code;validation cellular
+msgid "Introduce a valid number."
+msgstr "Introduza un número válido."
+
+#: Model/Patient.php:validation
+#: for field code
+msgid "Please supply three or four numbers for area code."
+msgstr "Por favor ingrese 3 o 4 números para el código de area."
+
+#: Model/Patient.php:validation
+#: for field cellular
+msgid "Only support numbers for cellular number of patient."
+msgstr "Únicamente soporta números para el celular."
+
+#: Model/Patient.php:validation
+#: for field cellular
+msgid "Please supply six or seven numbers for cellular."
+msgstr "Por favor ingrese 6 o 7  números para el número de celular."
+
+#: Model/Patient.php:validation
+#: for field hour
+msgid "Insert valid hour format to send SMS."
+msgstr "Ingrese un formato de hora válido."
+
+#~ msgid "Please supply nine numbers for area code."
+#~ msgstr "Por favor ingrese 7 números para el número celular."

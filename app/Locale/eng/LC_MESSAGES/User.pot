@@ -1,0 +1,114 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-06-29 19:53-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/UsersController.php:59
+msgid "User or Password not valid."
+msgstr ""
+
+#: Controller/UsersController.php:99;133;160
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:114;137
+msgid "The user has been saved"
+msgstr ""
+
+#: Controller/UsersController.php:117;140
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:164
+msgid "User deleted"
+msgstr ""
+
+#: Controller/UsersController.php:167
+msgid "User was not deleted"
+msgstr ""
+
+#: View/Elements/navbar.ctp:169
+msgid "Logout"
+msgstr ""
+
+#: View/Groups/view.ctp:27
+msgid "Related Users"
+msgstr ""
+
+#: View/Groups/view.ctp:31
+#: View/Users/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: View/Groups/view.ctp:32
+#: View/Users/view.ctp:9
+msgid "Username"
+msgstr ""
+
+#: View/Groups/view.ctp:33
+#: View/Users/view.ctp:14
+msgid "Password"
+msgstr ""
+
+#: View/Groups/view.ctp:34
+msgid "Group Id"
+msgstr ""
+
+#: View/Groups/view.ctp:35
+#: View/Users/view.ctp:24
+msgid "Created"
+msgstr ""
+
+#: View/Groups/view.ctp:36
+#: View/Users/view.ctp:29
+msgid "Modified"
+msgstr ""
+
+#: View/Groups/view.ctp:60
+#: View/Users/index.ctp:5
+msgid "New User"
+msgstr ""
+
+#: View/Users/add.ctp:4
+msgid "Add User"
+msgstr ""
+
+#: View/Users/edit.ctp:4
+msgid "Edit User"
+msgstr ""
+
+#: View/Users/index.ctp:4
+msgid "Users"
+msgstr ""
+
+#: View/Users/login.ctp:17
+msgid "username"
+msgstr ""
+
+#: View/Users/login.ctp:24
+msgid "password"
+msgstr ""
+
+#: View/Users/login.ctp:30
+msgid "Sign in"
+msgstr ""
+
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr ""
+
+#: View/Users/view.ctp:19
+msgid "Group"
+msgstr ""
+

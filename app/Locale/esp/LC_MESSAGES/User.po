@@ -1,0 +1,126 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-23 19:21-0300\n"
+"PO-Revision-Date: 2013-07-23 19:25-0300\n"
+"Last-Translator: nlara <nlara@guialocal.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/UsersController.php:61
+msgid "User or Password not valid."
+msgstr "Usuario o Contraseña inválida."
+
+#: Controller/UsersController.php:101;134;161
+msgid "Invalid user"
+msgstr "Usuario inválido"
+
+#: Controller/UsersController.php:115;138
+msgid "The user has been saved"
+msgstr "El usuario se guardo correctamente"
+
+#: Controller/UsersController.php:118;141
+msgid "The user could not be saved. Please, try again."
+msgstr "El usuario no pudo ser guardado. Por favor, intenta de nuevo."
+
+#: Controller/UsersController.php:165
+msgid "User deleted"
+msgstr "Usuario eliminado"
+
+#: Controller/UsersController.php:168
+msgid "User was not deleted"
+msgstr "El usuario no pudo eliminarse"
+
+#: View/Elements/navbar.ctp:169
+msgid "Logout"
+msgstr "Cerrar Sesión"
+
+#: View/Groups/view.ctp:27
+msgid "Related Users"
+msgstr "Usuarios"
+
+#: View/Groups/view.ctp:31
+#: View/Users/index.ctp:10
+#: View/Users/view.ctp:4
+msgid "Id"
+msgstr "Id"
+
+#: View/Groups/view.ctp:32
+#: View/Users/add.ctp:6
+#: View/Users/edit.ctp:7
+#: View/Users/index.ctp:11
+#: View/Users/view.ctp:9
+msgid "Username"
+msgstr "Usuario"
+
+#: View/Groups/view.ctp:33
+#: View/Users/add.ctp:11
+#: View/Users/edit.ctp:12
+#: View/Users/index.ctp:12
+#: View/Users/view.ctp:14
+msgid "Password"
+msgstr "Contraseña"
+
+#: View/Groups/view.ctp:34
+msgid "Group Id"
+msgstr "Id Grupo"
+
+#: View/Groups/view.ctp:35
+#: View/Users/index.ctp:14
+#: View/Users/view.ctp:24
+msgid "Created"
+msgstr "Creado"
+
+#: View/Groups/view.ctp:36
+#: View/Users/index.ctp:15
+#: View/Users/view.ctp:29
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/Groups/view.ctp:72
+#: View/Users/index.ctp:5
+msgid "New User"
+msgstr "Nuevo Usuario"
+
+#: View/Users/add.ctp:4
+msgid "Add User"
+msgstr "Agregar Usuario"
+
+#: View/Users/add.ctp:15
+#: View/Users/edit.ctp:16
+#: View/Users/index.ctp:13
+#: View/Users/view.ctp:19
+msgid "Group"
+msgstr "Grupo"
+
+#: View/Users/edit.ctp:4
+msgid "Edit User"
+msgstr "Editar Usuario"
+
+#: View/Users/index.ctp:4
+msgid "Users"
+msgstr "Usuarios"
+
+#: View/Users/login.ctp:17
+msgid "username"
+msgstr "usuario"
+
+#: View/Users/login.ctp:24
+msgid "password"
+msgstr "contraseña"
+
+#: View/Users/login.ctp:30
+msgid "Sign in"
+msgstr "Ingresar"
+
+#: View/Users/view.ctp:2
+msgid "User"
+msgstr "Usuario"
+

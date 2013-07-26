@@ -1,0 +1,164 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-23 19:10-0300\n"
+"PO-Revision-Date: 2013-07-23 19:12-0300\n"
+"Last-Translator: nlara <nlara@guialocal.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/CampaignsController.php:29;69;94
+msgid "Invalid campaign"
+msgstr "Campaña Inválida"
+
+#: Controller/CampaignsController.php:52;73
+msgid "The campaign has been saved"
+msgstr "La campaña se guardo correctamente"
+
+#: Controller/CampaignsController.php:55;76
+msgid "The campaign could not be saved. Please, try again."
+msgstr "La campaña no pudo ser guardada. Por favor, intenta de nuevo."
+
+#: Controller/CampaignsController.php:98
+msgid "Campaign deleted"
+msgstr "Campaña eliminada"
+
+#: Controller/CampaignsController.php:101
+msgid "Campaign was not deleted"
+msgstr "La campaña no pudo eliminarse"
+
+#: View/Campaigns/add.ctp:5
+msgid "Add Campaign"
+msgstr "Agregar Campaña"
+
+#: View/Campaigns/add.ctp:8
+#: View/Campaigns/edit.ctp:10
+#: View/Campaigns/index.ctp:11
+#: View/Campaigns/view.ctp:9
+msgid "Name"
+msgstr "Nombre"
+
+#: View/Campaigns/add.ctp:15
+#: View/Campaigns/edit.ctp:16
+#: View/Campaigns/view.ctp:14
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#: View/Campaigns/add.ctp:23
+#: View/Campaigns/edit.ctp:23
+#: View/Campaigns/view.ctp:19
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#: View/Campaigns/add.ctp:30
+#: View/Campaigns/edit.ctp:30
+#: View/Campaigns/index.ctp:15
+#: View/Campaigns/view.ctp:29
+msgid "Signature"
+msgstr "Firma"
+
+#: View/Campaigns/add.ctp:34
+#: View/Campaigns/edit.ctp:35
+#: View/Campaigns/index.ctp:14
+#: View/Campaigns/view.ctp:24
+msgid "Status"
+msgstr "Estado"
+
+#: View/Campaigns/edit.ctp:5
+msgid "Edit Campaign"
+msgstr "Editar Campaña"
+
+#: View/Campaigns/index.ctp:4
+msgid "Campaigns"
+msgstr "Campañas"
+
+#: View/Campaigns/index.ctp:5
+msgid "New Campaign"
+msgstr "Nueva Campaña"
+
+#: View/Campaigns/index.ctp:10
+#: View/Campaigns/view.ctp:4
+msgid "Id"
+msgstr "Id"
+
+#: View/Campaigns/index.ctp:12
+#, fuzzy
+msgid "start_date"
+msgstr "Fecha Inicio"
+
+#: View/Campaigns/index.ctp:13
+msgid "end_date"
+msgstr "Fecha Fin"
+
+#: View/Campaigns/index.ctp:16
+#: View/Campaigns/view.ctp:34
+msgid "Created"
+msgstr "Creado"
+
+#: View/Campaigns/index.ctp:17
+#: View/Campaigns/view.ctp:39
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/Campaigns/index.ctp:26
+#: View/Campaigns/view.ctp:26;123
+#: View/CampaignsPatients/index.ctp:29
+#: View/Patients/view.ctp:64
+msgid "Activate"
+msgstr "Activada"
+
+#: View/Campaigns/index.ctp:26
+#: View/Campaigns/view.ctp:26;123
+#: View/CampaignsPatients/index.ctp:29
+#: View/Patients/view.ctp:64
+msgid "Desactivate"
+msgstr "Desactivada"
+
+#: View/Campaigns/view.ctp:2
+msgid "Campaign"
+msgstr "Campaña"
+
+#: Model/Campaign.php:validation
+#: for field id
+msgid "numeric"
+msgstr "valor numérico"
+
+#: Model/Campaign.php:validation
+#: for field start_date
+msgid "Add a valid start date dd/mm/yy."
+msgstr "Ingrese una fecha inicio válida dia/mes/año."
+
+#: Model/Campaign.php:validation
+#: for field end_date
+msgid "Add a valid end date dd/mm/yy."
+msgstr "Ingrese una fecha fin válida dia/mes/año."
+
+#: Model/Campaign.php:validation
+#: for field end_date
+msgid "End date must be greater than start date."
+msgstr "La Fecha Fin no debe ser mayor a la Fecha Inicio."
+
+#: Model/Campaign.php:validation
+#: for field status
+msgid "Add status for the campaign."
+msgstr "Ingrese el estado de la campaña."
+
+#: Model/Campaign.php:validation
+#: for field signature
+msgid "Add signature that represents campaign."
+msgstr "Ingrese la firma que representa la campaña."
+
+#: Model/Campaign.php:validation
+#: for field signature
+msgid "Message must be no larger than 18 characters long."
+msgstr "El mensaje no debe tener más de 18 caraceteres de largo."
+
+#~ msgid "Add a valid alphanumeric name."
+#~ msgstr "Únicamente letras y números para el nombre."

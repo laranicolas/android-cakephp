@@ -1,0 +1,232 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-23 19:21-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:80
+msgid "Plugin to process"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:83
+msgid "Better manage, and easily synchronize you application's ACO tree"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:88
+msgid "Add new ACOs for new controllers and actions. Does not remove nodes from the ACO table."
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:93
+msgid "Perform a full sync on the ACO table.Will create new ACOs or missing controllers and actions.Will also remove orphaned entries that no longer have a matching controller/action"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:97
+msgid "Verify the tree structure of either your Aco or Aro Trees"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:102
+msgid "The type of tree to verify"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:108
+msgid "Recover a corrupted Tree"
+msgstr ""
+
+#: Plugin/AclExtras/Console/Command/AclExtrasShell.php:113
+msgid "The type of tree to recover"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:123
+msgid "<error>Plugin %s not found or not activated</error>"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:136
+msgid "<success>Aco Update Complete</success>"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:181
+msgid "Deleted %s and all children"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:222
+msgid "Created Aco node: <success>%s</success>"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:272
+msgid "Unable to get methods for \"%s\""
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:293
+msgid "Deleted Aco node: <warning>%s</warning>"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:312
+msgid "<success>Tree is valid and strong</success>"
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:330
+msgid "Tree has been recovered, or tree did not need recovery."
+msgstr ""
+
+#: Plugin/AclExtras/Lib/AclExtras.php:332
+msgid "<error>Tree recovery failed.</error>"
+msgstr ""
+
+#: View/Campaigns/add.ctp:36
+#: View/Campaigns/edit.ctp:37
+#: View/CampaignsPatients/add.ctp:34
+#: View/CampaignsPatients/edit.ctp:10
+#: View/Groups/add.ctp:11
+#: View/Groups/edit.ctp:12
+#: View/Patients/add.ctp:53
+#: View/Patients/edit.ctp:61
+#: View/Posts/add.ctp:25
+#: View/Posts/edit.ctp:26
+#: View/Users/add.ctp:17
+#: View/Users/edit.ctp:18
+msgid "Submit"
+msgstr ""
+
+#: View/Campaigns/index.ctp:18
+#: View/Campaigns/view.ctp:56;115
+#: View/CampaignsPatients/index.ctp:14
+#: View/Groups/index.ctp:14
+#: View/Groups/view.ctp:37
+#: View/Patients/index.ctp:18
+#: View/Patients/view.ctp:55
+#: View/Posts/index.ctp:16
+#: View/Users/index.ctp:16
+msgid "Actions"
+msgstr ""
+
+#: View/Campaigns/index.ctp:33
+#: View/Campaigns/view.ctp:70
+#: View/Groups/index.ctp:25
+#: View/Patients/index.ctp:33
+#: View/Posts/index.ctp:31
+msgid "View"
+msgstr ""
+
+#: View/Campaigns/index.ctp:40
+#: View/Campaigns/view.ctp:77;127
+#: View/CampaignsPatients/index.ctp:35
+#: View/Groups/index.ctp:32
+#: View/Groups/view.ctp:52
+#: View/Patients/index.ctp:40
+#: View/Patients/view.ctp:68
+#: View/Posts/index.ctp:38
+#: View/Users/index.ctp:31
+msgid "Edit"
+msgstr ""
+
+#: View/Campaigns/index.ctp:47
+#: View/Campaigns/view.ctp:84;134
+#: View/CampaignsPatients/index.ctp:42
+#: View/Groups/index.ctp:39
+#: View/Groups/view.ctp:59
+#: View/Patients/index.ctp:47
+#: View/Patients/view.ctp:75
+#: View/Posts/index.ctp:45
+#: View/Users/index.ctp:38
+msgid "Delete"
+msgstr ""
+
+#: View/Campaigns/index.ctp:49
+#: View/Campaigns/view.ctp:87;137
+#: View/CampaignsPatients/index.ctp:44
+#: View/Groups/index.ctp:41
+#: View/Groups/view.ctp:62
+#: View/Patients/index.ctp:49
+#: View/Patients/view.ctp:78
+#: View/Posts/index.ctp:47
+#: View/Users/index.ctp:40
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Campaigns/index.ctp:59
+#: View/CampaignsPatients/index.ctp:54
+#: View/Elements/ajax_table.ctp:93
+#: View/Groups/index.ctp:51
+#: View/Patients/index.ctp:59
+#: View/Posts/index.ctp:57
+#: View/Users/index.ctp:50
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/Campaigns/index.ctp:64
+#: View/CampaignsPatients/index.ctp:59
+#: View/Elements/ajax_table.ctp:98
+#: View/Groups/index.ctp:56
+#: View/Patients/index.ctp:64
+#: View/Posts/index.ctp:62
+#: View/Users/index.ctp:55
+msgid "previous"
+msgstr ""
+
+#: View/Campaigns/index.ctp:66
+#: View/CampaignsPatients/index.ctp:61
+#: View/Elements/ajax_table.ctp:100
+#: View/Groups/index.ctp:58
+#: View/Patients/index.ctp:66
+#: View/Posts/index.ctp:64
+#: View/Users/index.ctp:57
+msgid "next"
+msgstr ""
+
+#: View/Elements/navbar.ctp:20
+msgid "Groups"
+msgstr ""
+
+#: View/Elements/navbar.ctp:25
+msgid "Users"
+msgstr ""
+
+#: View/Elements/navbar.ctp:30;52;74
+msgid "Patients"
+msgstr ""
+
+#: View/Elements/navbar.ctp:35;57;79
+msgid "Campaigns"
+msgstr ""
+
+#: View/Elements/navbar.ctp:40;62;84
+msgid "CampaignsPatients"
+msgstr ""
+
+#: View/Elements/navbar.ctp:45;67;89
+msgid "Posts"
+msgstr ""
+
+#: View/Elements/navbar.ctp:129
+msgid "Home"
+msgstr ""
+
+#: View/Layouts/default.ctp:20
+#: View/Layouts/login.ctp:4
+#: View/Users/login.ctp:9
+msgid "SMS Panel"
+msgstr ""
+
+#: Model/Group.php:validation for field id
+#: Model/User.php:validation for field id;validation for field group_id
+msgid "numeric"
+msgstr ""
+
+#: Model/User.php:validation for field username
+msgid "alphanumeric"
+msgstr ""
+
+#: Model/User.php:validation for field password
+msgid "notempty"
+msgstr ""
+

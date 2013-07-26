@@ -1,0 +1,112 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-23 19:10-0300\n"
+"PO-Revision-Date: 2013-07-23 19:13-0300\n"
+"Last-Translator: nlara <nlara@guialocal.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/CampaignsPatientsController.php:55;78
+msgid "The campaigns patient has been saved"
+msgstr "Los pacientes en las campañas se guardaron correctamente."
+
+#: Controller/CampaignsPatientsController.php:58;81
+msgid "The campaigns patient could not be saved. Please, try again."
+msgstr "Los pacientes no pudieron ser guardado en la campaña. Por favor, intenta de nuevo."
+
+#: Controller/CampaignsPatientsController.php:74;102;124;160
+msgid "Invalid campaigns patient"
+msgstr "Paciente en campaña inválido"
+
+#: Controller/CampaignsPatientsController.php:107
+msgid "Campaigns patient deleted"
+msgstr "Paciente en campaña eliminado"
+
+#: Controller/CampaignsPatientsController.php:110
+msgid "Campaigns patient was not deleted"
+msgstr "Paciente en campaña no pudo eliminarse."
+
+#: View/Campaigns/view.ctp:108
+#: View/Patients/view.ctp:47
+msgid "Related Campaigns Patients"
+msgstr "Pacientes en Campañas"
+
+#: View/Campaigns/view.ctp:112
+#: View/CampaignsPatients/index.ctp:10
+#: View/Patients/view.ctp:51
+msgid "Id"
+msgstr "Id"
+
+#: View/Campaigns/view.ctp:113
+#: View/CampaignsPatients/index.ctp:12
+#: View/Patients/view.ctp:53
+msgid "Patient"
+msgstr "Paciente"
+
+#: View/Campaigns/view.ctp:114
+#: View/CampaignsPatients/edit.ctp:8
+#: View/CampaignsPatients/index.ctp:13
+#: View/Patients/view.ctp:54
+msgid "Status"
+msgstr "Estado"
+
+#: View/Campaigns/view.ctp:148
+#: View/Patients/view.ctp:89
+msgid "New Campaigns Patient"
+msgstr "Nuevo Paciente en Campaña"
+
+#: View/CampaignsPatients/add.ctp:29
+msgid "Add Campaigns Patient"
+msgstr "Agregar Paciente en Campaña"
+
+#: View/CampaignsPatients/add.ctp:30
+#: View/CampaignsPatients/edit.ctp:6
+#: View/CampaignsPatients/index.ctp:11
+#: View/Patients/view.ctp:52
+msgid "Campaign"
+msgstr "Campaña"
+
+#: View/CampaignsPatients/edit.ctp:4
+msgid "Edit Campaigns Patient"
+msgstr "Editar Paciente en Campaña"
+
+#: View/CampaignsPatients/edit.ctp:7
+msgid "Pacientes"
+msgstr "Pacientes"
+
+#: View/CampaignsPatients/index.ctp:4
+msgid "Campaigns Patients"
+msgstr "Pacientes en Campañas"
+
+#: View/CampaignsPatients/index.ctp:5
+msgid "New Campaign Patient"
+msgstr "Nuevo Paciente en Campaña"
+
+#: Model/CampaignsPatient.php:validation
+#: for field id;validation status
+msgid "numeric"
+msgstr "valor numérico"
+
+#: Model/CampaignsPatient.php:validation
+#: for field campaign_id
+msgid "Select a specific Campaign."
+msgstr "Seleccionar una campaña específica."
+
+#: Model/CampaignsPatient.php:validation
+#: for field patient_id
+msgid "Select a patient to add in Campaign."
+msgstr "Seleccionar un paciente para agregar en la Campaña."
+
+#~ msgid "Patient Id"
+#~ msgstr "IdPaciente"
+
+#~ msgid "status"
+#~ msgstr "estado"
