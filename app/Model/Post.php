@@ -46,8 +46,8 @@ class Post extends AppModel {
 				'required' => true
 			),
 			'maxLength' => array(
-				'rule' => array('maxLength', 160),
-				'message' => 'Message must be no larger than 160 characters long.'
+				'rule' => array('maxLength', 140),
+				'message' => 'Signature must be no larger than 140 characters long.'
 			)
 		),
 		'start_date' => array(

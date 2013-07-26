@@ -8,6 +8,8 @@ App::uses('AppModel', 'Model');
  */
 class CampaignsPatient extends AppModel {
 
+	public $validationDomain = 'CampaignsPatient';
+
 /**
  * Validation rules
  *
@@ -17,31 +19,25 @@ class CampaignsPatient extends AppModel {
 		'id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'required' => true,
+				'last' => true, // Stop validation after this rule
+				'on' => 'update', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'campaign_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'message' => 'Select a specific Campaign.',
+				'required' => true,
+				'last' => true
 			),
 		),
 		'patient_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'message' => 'Select a patient to add in Campaign.',
+				'required' => true,
+				'last' => true
 			),
 		),
 		'status' => array(

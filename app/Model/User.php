@@ -73,10 +73,13 @@ class User extends AppModel {
 			'order' => ''
 		)
 	);
-	// public $actsAs = array('Acl' => array('type' => 'requester'));
 
 	public function beforeSave($options = array()) {
-		$this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
+		if (!empty($this->data['User']['changePassword'])) {
+			$this->data['User']['password'] = AuthComponent::password($this->data['User']['changePassword']);
+		} else {
+			unset($this->data['User']['password']);
+		}
 		return true;
 	}
 

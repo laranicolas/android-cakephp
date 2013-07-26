@@ -14,9 +14,6 @@ class Patient extends AppModel {
  */
 	public $displayField = 'name';
 	public $validationDomain = 'Patient';
-	public $virtualFields = array(
-		'code' => 'SUBSTRING(Patient.cellular, 1, 4)'
-	);
 
 /**
  * Validation rules
@@ -44,8 +41,8 @@ class Patient extends AppModel {
 			'alphanumeric' => array(
 				'rule' => array('alphanumeric'),
 				'message' => 'Only alphanumeric type for surname.',
-				'allowEmpty' => false,
-				'required' => true,
+				'allowEmpty' => true,
+				'required' => false,
 			)
 		),
 		'code' => array(
@@ -53,6 +50,7 @@ class Patient extends AppModel {
 				'rule' => array('numeric'),
 				'message' => 'Only support numbers for the area code of patient.',
 				'allowEmpty' => false,
+				'required' => true
 			),
 			'notZero' => array(
 				'rule' => array('custom','/[^0]+/m'),
@@ -60,15 +58,16 @@ class Patient extends AppModel {
 				'last' => true
 			),
 			'phone' => array(
-				'rule' => array('custom', '/^[0-9]{4}$/'),
-				'message' => 'Please supply four numbers for area code.',
+				'rule' => array('custom', '/^[0-9]{3,4}$/'),
+				'message' => 'Please supply three or four numbers for area code.',
 			)
 		),
 		'cellular' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				'message' => 'Only support numbers for the area code of patient.',
+				'message' => 'Only support numbers for cellular number of patient.',
 				'allowEmpty' => false,
+				'required' => true
 			),
 			'notZero' => array(
 				'rule' => array('custom','/[^0]+/m'),
@@ -76,8 +75,9 @@ class Patient extends AppModel {
 				'last' => true
 			),
 			'phone' => array(
-				'rule' => array('custom', '/^[0-9]{7}$/'),
-				'message' => 'Please supply nine numbers for area code.',
+				//'rule' => array('custom', '/^[0-9]{7}$/'),
+				'rule' => array('custom', '/^[0-9]{6,7}$/'),
+				'message' => 'Please supply six or seven numbers for cellular.',
 			)
 		),
 		'hour' => array(
@@ -113,24 +113,9 @@ class Patient extends AppModel {
 		)
 	);
 
-	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $val) {
-			if (isset($val['Patient']['cellular'])) {
-				$results[$key]['Patient']['cellular'] = substr($results[$key]['Patient']['cellular'], 4);
-			}
-		}
-		return $results;
-	}
-
 	public function beforeSave() {
-		if (
-			!empty($this->data['Patient']['cellular'])
-			&& !empty($this->data['Patient']['code'])
-			&& !empty($this->data['Patient']['hour'])
-		) {
+		if (!empty($this->data['Patient']['hour'])) {
 			$this->data['Patient']['hour'] .= ':00';
-			$this->data['Patient']['cellular'] = $this->data['Patient']['code'] . $this->data['Patient']['cellular'];
-			unset($this->data['Patient']['code']);
 		}
 		return true;
 	}

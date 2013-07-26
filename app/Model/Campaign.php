@@ -31,11 +31,11 @@ class Campaign extends AppModel {
 			),
 		),
 		'name' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				'message' => 'Add a valid alphanumeric name.',
-				'required' => true
-			),
+			// 'alphanumeric' => array(
+			// 	'rule' => array('alphanumeric'),
+			// 	'message' => 'Add a valid alphanumeric name.',
+			// 	'required' => true
+			// ),
 		),
 		'start_date' => array(
 			'date' => array(
@@ -68,6 +68,10 @@ class Campaign extends AppModel {
 				'allowEmpty' => false,
 				'required' => true
 			),
+			'maxLength' => array(
+				'rule' => array('maxLength', 18),
+				'message' => 'Message must be no larger than 18 characters long.'
+			)
 		),
 	);
 
