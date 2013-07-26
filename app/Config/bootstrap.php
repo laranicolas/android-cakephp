@@ -24,6 +24,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+Configure::write('Config.language', 'esp');
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
