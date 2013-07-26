@@ -6,7 +6,7 @@
 ?>
 
 <div class="login-box mtl">
-	<h4><?=__('SMS panel')?></h4>
+	<h4><?=__('SMS Panel')?></h4>
 	<?=$this->Form->create('User', array(
 		'id' => 'UserLoginForm',
 		'url' => array('action' => 'login'),
@@ -14,22 +14,22 @@
 	))?>
 		<?=$this->Form->input('username', array(
 			'div' => false,
-			'placeholder' => __d('user', 'username'),
+			'placeholder' => __d('User', 'username'),
 			'label' => false,
 			'class' => 'input-medium',
 			'autocomplete' => 'off'
 		))?>
 		<?=$this->Form->input('password', array(
 			'div' => false,
-			'placeholder' => __d('user', 'password'),
+			'placeholder' => __d('User', 'password'),
 			'label' => false,
-			'class' => 'input-medium',
+			'class' => 'mlm input-medium',
 			'autocomplete' => 'off',
 			'value' => ''
 		))?>
-		<?=$this->Form->submit(__('Sign in'), array(
+		<?=$this->Form->submit(__d('User', 'Sign in'), array(
 			'div' => false,
-			'class' => 'btn'
+			'class' => 'mlm btn btn-medium btn-info'
 		))?>
 	<?=$this->Form->end()?>
 </div>

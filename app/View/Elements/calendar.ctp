@@ -8,12 +8,20 @@ $jsimageUrl = json_encode($imageUrl);
 echo $this->Html->scriptBlock(
 <<<JS
 $(function() {
+	now = new Date();
+	today = $.datepicker.formatDate("dd/mm/yy", now);
+	today = $.datepicker.parseDate("dd/mm/yy", today);
+
 	$( "#startDate").datepicker({
+		minDate: today,
 		showOn: "button",
 		buttonImage: {$jsimageUrl},
 		buttonImageOnly: true,
 		onClose: function( selectedDate ) {
 			$( "#endDate" ).datepicker("option", "minDate", selectedDate);
+			if (!selectedDate) {
+				$( "#endDate" ).datepicker("option", "minDate", today);
+			}
 			$( "#endDate" ).datepicker( "show" );
 		}
 	});
@@ -22,8 +30,13 @@ $(function() {
 		showOn: "button",
 		buttonImage: {$jsimageUrl},
 		buttonImageOnly: true,
+		beforeShow: function() {
+			if (!$('#startDate').val()) {
+				$( "#endDate" ).datepicker("option", "minDate", today);
+			}	
+		},
 		onClose: function( selectedDate ) {
-			$( "#startDate" ).datepicker("option", "maxDate", selectedDate);			
+			$( "#startDate" ).datepicker("option", "maxDate", selectedDate);
 		}
 	});
 });

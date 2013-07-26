@@ -1,13 +1,11 @@
 <div class="campaignsPatients form hero-unit">
-<?php echo $this->Form->create('CampaignsPatient'); ?>
+<?= $this->Form->create('CampaignsPatient')?>
 	<fieldset>
-		<legend><?php echo __('Edit Campaigns Patient'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('campaign_id');
-		echo $this->Form->input('patient_id');
-		echo $this->Form->input('status');
-	?>
+		<legend><?= __d('CampaignsPatient', 'Edit Campaigns Patient')?></legend>
+		<?= $this->Form->input('id')?>
+		<?= $this->Form->input('campaign_id', array('label' => __d('CampaignsPatient', 'Campaign')))?>
+		<?= $this->Form->input('patient_id', array('label' => __d('CampaignsPatient', 'Pacientes')))?>
+		<?= $this->Form->input('status', array('label' => __d('CampaignsPatient', 'Status')))?>
 	</fieldset>
 <?=$this->Form->end(__('Submit'))?>
 </div>

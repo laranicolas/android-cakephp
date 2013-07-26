@@ -1,11 +1,13 @@
 <div class="groups form hero-unit">
-<?php echo $this->Form->create('Group'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Group'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-	?>
-	</fieldset>
-<?=$this->Form->end(__('Submit'))?>
+	<?= $this->Form->create('Group')?>
+		<fieldset>
+			<legend><?= __d('Group', 'Edit Group')?></legend>
+			<?= $this->Form->input('id')?>
+			<?= $this->Form->input('name', array(
+				'label' => __d('Group', 'Name'),
+				'autocomplete' => 'off'
+				)
+			)?>
+		</fieldset>
+	<?=$this->Form->end(__('Submit'))?>
 </div>

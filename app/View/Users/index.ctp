@@ -1,36 +1,48 @@
 <div class="users index">
 	<div>
 		<ul>
-			<li><h2><?php echo __('Users'); ?></h2></li>
-			<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-primary btn-mini')); ?></li>
+			<li><h2><?= __d('User', 'Users')?></h2></li>
+			<li><?= $this->Html->link(__d('User', 'New User'), array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-primary btn-mini'))?></li>
 		</ul>
 	</div>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('username'); ?></th>
-			<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('group_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th><?= $this->Paginator->sort('id', __d('User', 'Id'))?></th>
+			<th><?= $this->Paginator->sort('username', __d('User', 'Username'))?></th>
+			<th><?= $this->Paginator->sort('password', __d('User', 'Password'))?></th>
+			<th><?= $this->Paginator->sort('group_id', __d('User', 'Group'))?></th>
+			<th><?= $this->Paginator->sort('created', __d('User', 'Created'))?></th>
+			<th><?= $this->Paginator->sort('modified', __d('User', 'Modified'))?></th>
+			<th class="actions"><?= __('Actions')?></th>
 	</tr>
 	<?php foreach ($users as $user): ?>
 	<tr>
-		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
+		<td><?= h($user['User']['id'])?>&nbsp;</td>
+		<td><?= h($user['User']['username'])?>&nbsp;</td>
+		<td><?= h($user['User']['password'])?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id'])); ?>
+			<?= $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id']))?>
 		</td>
-		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
+		<td><?= h($user['User']['created'])?>&nbsp;</td>
+		<td><?= h($user['User']['modified'])?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+			<?= 
+				$this->Html->link(
+					__('Edit'),
+					array('action' => 'edit', $user['User']['id']),
+					array('class' => 'btn btn-success btn-small')	
+				)
+			?>
+			<?= 
+				$this->Form->postLink(
+					__('Delete'), array('action' => 'delete', $user['User']['id']),
+					array('class' => 'btn btn-danger btn-small'),
+					__('Are you sure you want to delete # %s?', $user['User']['id'])
+				)
+			?>
 		</td>
 	</tr>
-<?php endforeach; ?>
+<?php endforeach;?>
 	</table>
 	<p>
 	<?php

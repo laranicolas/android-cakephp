@@ -2,32 +2,53 @@
 
 $cellular = '';
 $code = '';
-if (!empty($this->request->data['Patient']['cellular']) && $this->request->data['Patient']['code']) {
+
+if (!empty($this->request->data['Patient']['cellular'])) {
 	$cellular = 'value=' . $this->request->data['Patient']['cellular'];
+}
+if (!empty($this->request->data['Patient']['code'])) {
 	$code = 'value=' . $this->request->data['Patient']['code'];
 }
 
 echo $this->element('timer');
-
 ?>
 <div class="patients form hero-unit">
-<?php echo $this->Form->create('Patient'); ?>
+<?= $this->Form->create('Patient')?>
 	<fieldset>
-		<legend><?=__('Add Patient')?></legend>
-		<?=$this->Form->input('name')?>
-		<?=$this->Form->input('surname')?>
-		<div class='controls'>
-			<label class='span1'><?=__d('Patient', 'Code')?></label>
-			<label class='span2'><?=__d('Patient', 'Cellular')?></label>
-		</div>
+		<legend><?=__d('Patient', 'Add Patient')?></legend>
+		<?= $this->Form->input('name', array(
+			'label' => __d('Patient', 'Name'),
+			'autocomplete' => 'off'
+			)
+		)?>
+		<?=	$this->Form->input('surname', array(
+			'label' => __d('Patient', 'Surname'),
+			'autocomplete' => 'off'
+			)
+		)?>
+
 		<div class='controls controls-row required'>
-			<input name="data[Patient][code]" placeholder="0261" id="PatientCode" <?=$code?> class='span1' type='text'>
-			<input name="data[Patient][cellular]" placeholder="153673809" id="PatientCellular" <?=$cellular?> class='span2' type='text'>
-		</div>		
-		<?=$this->Form->input('hour', array(
+			<label class='inline mrm'><?=__d('Patient', 'Code')?></label>
+			<label class='inline mlxl'><?=__d('Patient', 'Cellular')?></label>
+		</div>
+
+		<div class='controls controls-row required'>
+			<input name="data[Patient][code]" autocomplete="off" placeholder="261" id="PatientCode" <?=$code?> class='span1' type='text'>
+			
+			<p class='span0'>15</p>
+
+			<input name="data[Patient][cellular]" autocomplete="off" placeholder="6123456" <?=$cellular?> id="PatientCellular" class='span2' type='text'>
+			
+			<?php if ($this->Form->isFieldError('code')) { echo $this->Form->error('code');}?>
+			<?php if ($this->Form->isFieldError('cellular')) { echo $this->Form->error('cellular');}?>
+		</div>	
+		<?= $this->Form->input('hour', array(
+			'label' => __d('Patient', 'Hour'),
 			'type' => 'text',
-			'class' => 'span1'
-		))?>
+			'class' => 'span1',
+			'autocomplete' => 'off'
+			)
+		)?>
 	</fieldset>
 <?=$this->Form->end(__('Submit'))?>
 </div>

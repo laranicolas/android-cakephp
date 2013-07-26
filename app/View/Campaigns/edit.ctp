@@ -1,22 +1,38 @@
-<?=$this->element('calendar');?>
+<?=$this->element('calendar')?>
 <div class="campaigns form hero-unit">
-<?php echo $this->Form->create('Campaign'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Campaign'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-		echo $this->Form->input('start_date', array(
-			'id' => 'startDate',
-			'type' => 'text'
-		));
-		echo $this->Form->input('end_date', array(
-			'id' => 'endDate',
-			'type' => 'text'	
-		));
-		echo $this->Form->input('signature');
-		echo $this->Form->input('status');
-	?>
-	</fieldset>
-<?=$this->Form->end(__('Submit'))?>
+	<?= $this->Form->create('Campaign')?>
+		<fieldset>
+			<legend><?= __d('Campaign', 'Edit Campaign')?></legend>
+		
+			<?= $this->Form->input('id')?>
+			
+			<?= $this->Form->input('name', array(
+				'label' => __d('Campaign', 'Name'),
+				'autocomplete' => 'off'
+				)
+			)?>
+			
+			<?= $this->Form->input('start_date', array(
+				'label' => __d('Campaign', 'Start Date'),
+				'id' => 'startDate',
+				'type' => 'text',
+				'autocomplete' => 'off'
+			))?>
+			
+			<?= $this->Form->input('end_date', array(
+				'label' => __d('Campaign', 'End Date'),
+				'id' => 'endDate',
+				'type' => 'text',
+				'autocomplete' => 'off'
+			))?>
+			
+			<?= $this->Form->input('signature', array(
+				'label' => __d('Campaign', 'Signature'),
+				'autocomplete' => 'off'
+				)
+			)?>
+			
+			<?= $this->Form->input('status', array('label' => __d('Campaign', 'Status')))?>
+		</fieldset>
+	<?=$this->Form->end(__('Submit'))?>
 </div>

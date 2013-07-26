@@ -1,34 +1,34 @@
 <div class="users view">
-<h2><?php  echo __('User'); ?></h2>
+<h2><?= __d('User', 'User')?></h2>
 	<dl class="dl-horizontal">
-		<dt><?php echo __('Id'); ?></dt>
+		<dt><?= __d('User', 'Id')?></dt>
 		<dd>
-			<?php echo h($user['User']['id']); ?>
+			<?= h($user['User']['id'])?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Username'); ?></dt>
+		<dt><?= __d('User', 'Username')?></dt>
 		<dd>
-			<?php echo h($user['User']['username']); ?>
+			<?= h($user['User']['username'])?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Password'); ?></dt>
+		<dt><?= __d('User', 'Password')?></dt>
 		<dd>
-			<?php echo h($user['User']['password']); ?>
+			<?= h($user['User']['password'])?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Group'); ?></dt>
+		<dt><?= __d('User', 'Group')?></dt>
 		<dd>
-			<?php echo $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id'])); ?>
+			<?= $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id']))?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		<dt><?= __d('User', 'Created')?></dt>
 		<dd>
-			<?php echo h($user['User']['created']); ?>
+			<?= h($user['User']['created'])?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?= __d('User', 'Modified')?></dt>
 		<dd>
-			<?php echo h($user['User']['modified']); ?>
+			<?= h($user['User']['modified'])?>
 			&nbsp;
 		</dd>
 	</dl>

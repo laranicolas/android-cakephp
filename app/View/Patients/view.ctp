@@ -1,42 +1,42 @@
 <div class="patients view">
-<h2><?php  echo __('Patient')?></h2>
+<h2><?= __d('Patient', 'Patient')?></h2>
 	<dl class="dl-horizontal">
-		<dt><?= __('Id')?></dt>
+		<dt><?= __d('Patient', 'Id')?></dt>
 		<dd>
 			<?= h($patient['Patient']['id'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Name')?></dt>
+		<dt><?= __d('Patient', 'Name')?></dt>
 		<dd>
 			<?= h($patient['Patient']['name'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Surname')?></dt>
+		<dt><?= __d('Patient', 'Surname')?></dt>
 		<dd>
 			<?= h($patient['Patient']['surname'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Code')?></dt>
+		<dt><?= __d('Patient', 'Code')?></dt>
 		<dd>
 			<?= h($patient['Patient']['code'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Cellular')?></dt>
+		<dt><?= __d('Patient', 'Cellular')?></dt>
 		<dd>
 			<?= h($patient['Patient']['cellular'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Hour')?></dt>
+		<dt><?= __d('Patient', 'Hour')?></dt>
 		<dd>
 			<?= h($patient['Patient']['hour'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Created')?></dt>
+		<dt><?= __d('Patient', 'Created')?></dt>
 		<dd>
 			<?= h($patient['Patient']['created'])?>
 			&nbsp;
 		</dd>
-		<dt><?= __('Modified')?></dt>
+		<dt><?= __d('Patient', 'Modified')?></dt>
 		<dd>
 			<?= h($patient['Patient']['modified'])?>
 			&nbsp;
@@ -44,14 +44,14 @@
 	</dl>
 </div>
 <div class="related">
-	<h3><?= __('Related Campaigns Patients')?></h3>
+	<h3><?= __d('CampaignsPatient', 'Related Campaigns Patients')?></h3>
 	<?php if (!empty($patient['CampaignsPatient'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?= __('Id')?></th>
-		<th><?= __('Campaign')?></th>
-		<th><?= __('Patient')?></th>
-		<th><?= __('status')?></th>
+		<th><?= __d('CampaignsPatient', 'Id')?></th>
+		<th><?= __d('CampaignsPatient', 'Campaign')?></th>
+		<th><?= __d('CampaignsPatient', 'Patient')?></th>
+		<th><?= __d('CampaignsPatient', 'Status')?></th>
 		<th class="actions"><?= __('Actions')?></th>
 	</tr>
 	<?php
@@ -63,11 +63,36 @@
 			<td><?= $patient['Patient']['name'] . ' ' . $patient['Patient']['surname']?></td>
 			<td><?= ($campaignsPatient['status']) ? __d("Campaign", "Activate") : __d("Campaign", "Desactivate")?></td>
 			<td class="actions">
-				<?= $this->Html->link(__('Edit'), array('controller' => 'campaigns_patients', 'action' => 'edit', $campaignsPatient['id']))?>
-				<?= $this->Form->postLink(__('Delete'), array('controller' => 'campaigns_patients', 'action' => 'delete', $campaignsPatient['id']), null, __('Are you sure you want to delete # %s?', $campaignsPatient['id']))?>
+				<?= 
+					$this->Html->link(
+						__('Edit'),
+						array('controller' => 'campaigns_patients', 'action' => 'edit', $campaignsPatient['id']),
+						array('class' => 'btn btn-success btn-small')
+					)
+				?>
+				<?= 
+					$this->Form->postLink(
+						__('Delete'),
+						array('controller' => 'campaigns_patients', 'action' => 'delete', $campaignsPatient['id']),
+						array('class' => 'btn btn-danger btn-small'),
+						__('Are you sure you want to delete # %s?', $campaignsPatient['id'])
+					)
+				?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
+	<div>
+		<ul>
+			<li>
+				<?=$this->Html->link(__d('CampaignsPatient', 'New Campaigns Patient'), array(
+					'controller' => 'campaigns_patients',
+					'action' => 'add'
+					), 
+					array('class' => 'btn btn-small btn-primary')
+				)?> 
+			</li>
+		</ul>
+	</div>
 </div>

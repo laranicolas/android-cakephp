@@ -17,7 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __('SMS Cpanel');
+$cakeDescription = __('SMS Panel');
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@ $cakeDescription = __('SMS Cpanel');
 		<?=$title_for_layout?>
 	</title>
 	<?=$this->Html->charset()?>
-	<?=$this->Html->meta('icon')?>
+	<?= $this->Html->meta('sms.ico', 'sms.ico', array('type' => 'icon'))?>
 	<?=$this->fetch('meta')?>
 
 	<?=$this->Html->css(array(

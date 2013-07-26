@@ -166,7 +166,7 @@ if ($this->request['controller'] == 'pages' && $this->request['action'] == 'disp
 		<ul class="nav pull-right">
 			<li><a href="#"><?=$loggedUser?></a></li>
 			<li class="active">
-				<?=$this->Html->link(__d('user', 'Logout'), '/logout')?>
+				<?=$this->Html->link(__d('User', 'Logout'), '/logout')?>
 			</li>
 		</ul>
 	</div>

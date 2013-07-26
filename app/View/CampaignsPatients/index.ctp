@@ -1,24 +1,24 @@
 <div class="campaignsPatients index">
 	<div>
 		<ul>
-			<li><h2><?php echo __('Campaigns Patients'); ?></h2></li>
-			<li><?php echo $this->Html->link(__('New Campaign Patient'), array('controller' => 'campaignsPatients', 'action' => 'add'), array('class' => 'btn btn-primary btn-mini')); ?></li>
+			<li><h2><?= __d('CampaignsPatient', 'Campaigns Patients')?></h2></li>
+			<li><?= $this->Html->link(__d('CampaignsPatient', 'New Campaign Patient'), array('controller' => 'campaignsPatients', 'action' => 'add'), array('class' => 'btn btn-primary btn-mini'))?></li>
 		</ul>
 	</div>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('campaign_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('patient_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('status'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th><?= $this->Paginator->sort('id', __d('CampaignsPatient', 'Id'))?></th>
+			<th><?= $this->Paginator->sort('campaign_id', __d('CampaignsPatient', 'Campaign'))?></th>
+			<th><?= $this->Paginator->sort('patient_id', __d('CampaignsPatient', 'Patient'))?></th>
+			<th><?= $this->Paginator->sort('status', __d('CampaignsPatient', 'Status'))?></th>
+			<th class="actions"><?= __('Actions')?></th>
 	</tr>
 
 	<?php foreach ($campaignsPatients as $campaignsPatient): ?>
 	<tr>
-		<td><?php echo h($campaignsPatient['CampaignsPatient']['id']); ?>&nbsp;</td>
+		<td><?= h($campaignsPatient['CampaignsPatient']['id'])?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($campaignsPatient['Campaign']['name'], array('controller' => 'campaigns', 'action' => 'view', $campaignsPatient['Campaign']['id'])); ?>
+			<?= $this->Html->link($campaignsPatient['Campaign']['name'], array('controller' => 'campaigns', 'action' => 'view', $campaignsPatient['Campaign']['id']))?>
 		</td>
 		<td>
 			<?= 
@@ -30,8 +30,20 @@
 		</td>
 
 		<td class="actions">
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $campaignsPatient['CampaignsPatient']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $campaignsPatient['CampaignsPatient']['id']), null, __('Are you sure you want to delete # %s?', $campaignsPatient['CampaignsPatient']['id'])); ?>
+			<?= 
+				$this->Html->link(
+					__('Edit'),
+					array('action' => 'edit', $campaignsPatient['CampaignsPatient']['id']),
+					array('class' => 'btn btn-success btn-small')	
+				)
+			?>
+			<?= 
+				$this->Form->postLink(
+					__('Delete'), array('action' => 'delete', $campaignsPatient['CampaignsPatient']['id']),
+					array('class' => 'btn btn-danger btn-small'),
+					__('Are you sure you want to delete # %s?', $campaignsPatient['CampaignsPatient']['id'])
+				)
+			?>
 		</td>
 	</tr>
 <?php endforeach; ?>

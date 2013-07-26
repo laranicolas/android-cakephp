@@ -1,36 +1,54 @@
 <div class="patients index">
 	<div>
 		<ul>
-			<li><h2><?php echo __('Patients'); ?></h2></li>
-			<li><?php echo $this->Html->link(__('New Patient'), array('controller' => 'patients', 'action' => 'add'), array('class' => 'btn btn-primary btn-mini')); ?></li>
+			<li><h2><?= __d('Patient', 'Patients')?></h2></li>
+			<li><?= $this->Html->link(__d('Patient', 'New Patient'), array('controller' => 'patients', 'action' => 'add'), array('class' => 'btn btn-primary btn-mini'))?></li>
 		</ul>
 	</div>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('surname'); ?></th>
-			<th><?php echo $this->Paginator->sort('code'); ?></th>
-			<th><?php echo $this->Paginator->sort('cellular'); ?></th>
-			<th><?php echo $this->Paginator->sort('hour'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th><?= $this->Paginator->sort('id', __d('Patient', 'Id'))?></th>
+			<th><?= $this->Paginator->sort('name', __d('Patient', 'Name'))?></th>
+			<th><?= $this->Paginator->sort('surname', __d('Patient', 'Surname'))?></th>
+			<th><?= $this->Paginator->sort('code', __d('Patient', 'Code'))?></th>
+			<th><?= $this->Paginator->sort('cellular', __d('Patient', 'Cellular'))?></th>
+			<th><?= $this->Paginator->sort('hour', __d('Patient', 'Hour'))?></th>
+			<th><?= $this->Paginator->sort('created', __d('Patient', 'Created'))?></th>
+			<th><?= $this->Paginator->sort('modified', __d('Patient', 'Modified'))?></th>
+			<th class="actions"><?= __('Actions')?></th>
 	</tr>
 	<?php foreach ($patients as $patient): ?>
 	<tr>
-		<td><?php echo h($patient['Patient']['id']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['name']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['surname']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['code']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['cellular']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['hour']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['created']); ?>&nbsp;</td>
-		<td><?php echo h($patient['Patient']['modified']); ?>&nbsp;</td>
+		<td><?= h($patient['Patient']['id'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['name'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['surname'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['code'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['cellular'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['hour'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['created'])?>&nbsp;</td>
+		<td><?= h($patient['Patient']['modified'])?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $patient['Patient']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $patient['Patient']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $patient['Patient']['id']), null, __('Are you sure you want to delete # %s?', $patient['Patient']['id'])); ?>
+			<?= 
+				$this->Html->link(
+					__('View'), 
+					array('action' => 'view', $patient['Patient']['id']),
+					array('class' => 'btn btn-success btn-small')
+				)
+			?>
+			<?= 
+				$this->Html->link(
+					__('Edit'),
+					array('action' => 'edit', $patient['Patient']['id']),
+					array('class' => 'btn btn-success btn-small')	
+				)
+			?>
+			<?= 
+				$this->Form->postLink(
+					__('Delete'), array('action' => 'delete', $patient['Patient']['id']),
+					array('class' => 'btn btn-danger btn-small'),
+					__('Are you sure you want to delete # %s?', $patient['Patient']['id'])
+				)
+			?>
 		</td>
 	</tr>
 <?php endforeach; ?>

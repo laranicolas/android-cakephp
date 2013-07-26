@@ -24,10 +24,10 @@ JS
 );
 ?>
 <div class="campaignsPatients form">
-<?php echo $this->Form->create('CampaignsPatient'); ?>
+<?=$this->Form->create('CampaignsPatient')?>
 	<fieldset>
-		<legend><?php echo __('Add Campaigns Patient'); ?></legend>
-		<?=$this->Form->input('campaign_id')?>
+		<legend><?= __d('CampaignsPatient', 'Add Campaigns Patient')?></legend>
+		<?=$this->Form->input('campaign_id', array('label' => __d('CampaignsPatient', 'Campaign')))?>
 		<div id="patients">
 		</div>		
 	</fieldset>

@@ -1,12 +1,19 @@
 <div class="users form hero-unit">
-<?php echo $this->Form->create('User'); ?>
+<?= $this->Form->create('User')?>
 	<fieldset>
-		<legend><?php echo __('Add User'); ?></legend>
-	<?php
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('group_id');
-	?>
+		<legend><?= __d('User', 'Add User')?></legend>
+		<?= $this->Form->input('username', array(
+			'label' => __d('User', 'Username'),
+			'autocomplete' => 'off'
+			)
+		)?>
+		<?= $this->Form->input('changePassword', array(
+			'label' => __d('User', 'Password'),
+			'autocomplete' => 'off',
+			'type' => 'password'
+			)
+		)?>
+		<?=	$this->Form->input('group_id', array('label' => __d('User', 'Group')))?>
 	</fieldset>
 <?=$this->Form->end(__('Submit'))?>
 </div>

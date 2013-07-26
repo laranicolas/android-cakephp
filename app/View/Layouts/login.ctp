@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-	<title><?=__('SMS Cpanel')?></title>
+	<title><?=__('SMS Panel')?></title>
 	<?=$this->Html->charset()?>
-	<?=$this->Html->meta('icon')?>
+	<?= $this->Html->meta('sms.ico', 'sms.ico', array('type' => 'icon'))?>
 	<?=$this->fetch('meta')?>
 	<?=$this->Html->css(array(
 		'general',

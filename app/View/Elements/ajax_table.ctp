@@ -40,9 +40,10 @@ JS
 <table cellpadding="0" cellspacing="0" class="mtm">
 	<tr class='headers'>
 		<td><?= $this->Form->checkbox('checkall', array('class' => 'checkall'))?></td>
-		<th><?= $this->Paginator->sort('name')?></th>
-		<th><?= $this->Paginator->sort('surname')?></th>
-		<th><?= $this->Paginator->sort('cellular')?></th>
+		<th><?= $this->Paginator->sort('name', __d('Patient', 'Name'))?></th>
+		<th><?= $this->Paginator->sort('surname', __d('Patient', 'Surname'))?></th>
+		<th><?= $this->Paginator->sort('cellular', __d('Patient', 'Code'))?></th>
+		<th><?= $this->Paginator->sort('cellular', __d('Patient', 'Cellular'))?></th>
 	</tr>
 	<?php foreach ($patients as $patient):?>
 	<tr>
@@ -64,6 +65,13 @@ JS
 		</td>
 		<td>
 			<?= $this->Html->link($patient['Patient']['surname'], array(
+				'controller' => 'patients',
+				'action' => 'view',
+				$patient['Patient']['id']
+			))?>
+		</td>
+		<td>
+			<?=$this->Html->link($patient['Patient']['code'], array(
 				'controller' => 'patients',
 				'action' => 'view',
 				$patient['Patient']['id']

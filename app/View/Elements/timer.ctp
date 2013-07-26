@@ -1,10 +1,10 @@
 <?php
 echo $this->Html->css(array(
-	'jquery/smoothness/jquery-ui-1.10.3.custom.min',
+	'jquery/smoothness/jquery-ui-1.10.3.custom',
 	'jquery/jquery.timepicker/jquery-ui-timepicker-addon'
 ));
 echo $this->Html->script(array(
-	'jquery/jquery.timepicker/jquery-ui-timepicker-addon.min',
+	'jquery/jquery.timepicker/jquery-ui-timepicker-addon',
 	'jquery/jquery.timepicker/l10n/jquery-ui-timepicker-es',
 ));
 
@@ -16,7 +16,8 @@ $(function() {
 		stepHour: 4,
 		hourMin: 8,
 		hourMax: 20,
-		hourGrid: 4
+		hourGrid: 4,
+		timeOnly: true
 	});
 });
 JS
