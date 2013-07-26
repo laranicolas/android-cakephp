@@ -28,7 +28,7 @@ class PatientsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Patient->exists($id)) {
-			throw new NotFoundException(__('Invalid patient'));
+			throw new NotFoundException(__d('Patient', 'Invalid patient'));
 		}
 
 		$this->Patient->Behaviors->load('Containable');
@@ -50,10 +50,10 @@ class PatientsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Patient->create();
 			if ($this->Patient->save($this->request->data)) {
-				$this->Session->setFlash(__('The patient has been saved'));
+				$this->Session->setFlash(__d('Patient', 'The patient has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The patient could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('Patient', 'The patient could not be saved. Please, try again.'));
 			}
 		}
 	}
@@ -67,14 +67,14 @@ class PatientsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Patient->exists($id)) {
-			throw new NotFoundException(__('Invalid patient'));
+			throw new NotFoundException(__d('Patient', 'Invalid patient'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Patient->save($this->request->data)) {
-				$this->Session->setFlash(__('The patient has been saved'));
+				$this->Session->setFlash(__d('Patient', 'The patient has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The patient could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('Patient', 'The patient could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Patient.' . $this->Patient->primaryKey => $id));
@@ -92,14 +92,14 @@ class PatientsController extends AppController {
 	public function delete($id = null) {
 		$this->Patient->id = $id;
 		if (!$this->Patient->exists()) {
-			throw new NotFoundException(__('Invalid patient'));
+			throw new NotFoundException(__d('Patient', 'Invalid patient'));
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Patient->delete()) {
-			$this->Session->setFlash(__('Patient deleted'));
+			$this->Session->setFlash(__d('Patient', 'Patient deleted'));
 			$this->redirect($this->referer());
 		}
-		$this->Session->setFlash(__('Patient was not deleted'));
+		$this->Session->setFlash(__d('Patient', 'Patient was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

@@ -24,6 +24,7 @@ class UsersController extends AppController {
 	// 	$group->id = 2;
 	// 	$this->Acl->deny($group, 'controllers');
 	// 	$this->Acl->allow($group, 'controllers/Pages/display');
+	// 	$this->Acl->allow($group, 'controllers/Users/login');
 	// 	$this->Acl->allow($group, 'controllers/Users/logout');
 	// 	$this->Acl->allow($group, 'controllers/Posts');
 	// 	$this->Acl->allow($group, 'controllers/Patients');
@@ -34,6 +35,7 @@ class UsersController extends AppController {
 	// 	$group->id = 3;
 	// 	$this->Acl->deny($group, 'controllers');
 	// 	$this->Acl->allow($group, 'controllers/Pages/display');
+	// 	$this->Acl->allow($group, 'controllers/Users/login');
 	// 	$this->Acl->allow($group, 'controllers/Users/logout');
 	// 	$this->Acl->allow($group, 'controllers/Posts/index');
 	// 	$this->Acl->allow($group, 'controllers/Posts/view');
@@ -96,7 +98,7 @@ class UsersController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
+			throw new NotFoundException(__d('User', 'Invalid user'));
 		}
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$this->set('user', $this->User->find('first', $options));
@@ -109,12 +111,11 @@ class UsersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->User->create();
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
+				$this->Session->setFlash(__d('User', 'The user has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('User', 'The user could not be saved. Please, try again.'));
 			}
 		}
 		$groups = $this->User->Group->find('list');
@@ -130,14 +131,14 @@ class UsersController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
+			throw new NotFoundException(__d('User', 'Invalid user'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
+				$this->Session->setFlash(__d('User', 'The user has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('User', 'The user could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
@@ -157,14 +158,14 @@ class UsersController extends AppController {
 	public function delete($id = null) {
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
-			throw new NotFoundException(__('Invalid user'));
+			throw new NotFoundException(__d('User', 'Invalid user'));
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->User->delete()) {
-			$this->Session->setFlash(__('User deleted'));
+			$this->Session->setFlash(__d('User', 'User deleted'));
 			$this->redirect($this->referer());
 		}
-		$this->Session->setFlash(__('User was not deleted'));
+		$this->Session->setFlash(__d('User', 'User was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

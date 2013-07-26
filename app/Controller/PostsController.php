@@ -10,7 +10,7 @@ class PostsController extends AppController {
 	public $paginate = array(
 		'limit' => 10,
 		'order' => array(
-		'Post.campaign_id' => 'asc'
+		'Post.start_date' => 'desc'
 		)
 	);
 
@@ -24,7 +24,7 @@ class PostsController extends AppController {
 		$posts = $this->paginate();
 		foreach ($posts as $k => $v) {
 			if (isset($v['Post']['text'])) {
-				$posts[$k]['Post']['text'] = $this->_truncate($v['Post']['text'], 5);
+				$posts[$k]['Post']['text'] = $this->_truncate($v['Post']['text'], 25);
 			}
 		}
 		$this->set(compact('posts'));
@@ -39,7 +39,7 @@ class PostsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Post->exists($id)) {
-			throw new NotFoundException(__('Invalid post'));
+			throw new NotFoundException(__d('Post', 'Invalid post'));
 		}
 		$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
 		$this->set('post', $this->Post->find('first', $options));
@@ -54,10 +54,10 @@ class PostsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved'));
+				$this->Session->setFlash(__d('Post', 'The post has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('Post', 'The post could not be saved. Please, try again.'));
 			}
 		}
 		$campaigns = $this->Post->Campaign->find('list');
@@ -73,15 +73,15 @@ class PostsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Post->exists($id)) {
-			throw new NotFoundException(__('Invalid post'));
+			throw new NotFoundException(__d('Post', 'Invalid post'));
 		}
 
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved'));
+				$this->Session->setFlash(__d('Post', 'The post has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('Post', 'The post could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
@@ -101,14 +101,14 @@ class PostsController extends AppController {
 	public function delete($id = null) {
 		$this->Post->id = $id;
 		if (!$this->Post->exists()) {
-			throw new NotFoundException(__('Invalid post'));
+			throw new NotFoundException(__d('Post', 'Invalid post'));
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Post->delete()) {
-			$this->Session->setFlash(__('Post deleted'));
+			$this->Session->setFlash(__d('Post', 'Post deleted'));
 			$this->redirect($this->referer());
 		}
-		$this->Session->setFlash(__('Post was not deleted'));
+		$this->Session->setFlash(__d('Post', 'Post was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
 /**

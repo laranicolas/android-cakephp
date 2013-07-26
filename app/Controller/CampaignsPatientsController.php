@@ -52,10 +52,10 @@ class CampaignsPatientsController extends AppController {
 
 			$this->CampaignsPatient->create();
 			if ($this->CampaignsPatient->saveMany($formatData)) {
-				$this->Session->setFlash(__('The campaigns patient has been saved'));
+				$this->Session->setFlash(__d('CampaignsPatient', 'The campaigns patient has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The campaigns patient could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('CampaignsPatient', 'The campaigns patient could not be saved. Please, try again.'));
 			}
 		}
 		$campaigns = $this->CampaignsPatient->Campaign->find('list');
@@ -71,14 +71,14 @@ class CampaignsPatientsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->CampaignsPatient->exists($id)) {
-			throw new NotFoundException(__('Invalid campaigns patient'));
+			throw new NotFoundException(__d('CampaignsPatient', 'Invalid campaigns patient'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->CampaignsPatient->save($this->request->data)) {
-				$this->Session->setFlash(__('The campaigns patient has been saved'));
+				$this->Session->setFlash(__d('CampaignsPatient', 'The campaigns patient has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The campaigns patient could not be saved. Please, try again.'));
+				$this->Session->setFlash(__d('CampaignsPatient', 'The campaigns patient could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('CampaignsPatient.' . $this->CampaignsPatient->primaryKey => $id));
@@ -99,15 +99,15 @@ class CampaignsPatientsController extends AppController {
 	public function delete($id = null) {
 		$this->CampaignsPatient->id = $id;
 		if (!$this->CampaignsPatient->exists()) {
-			throw new NotFoundException(__('Invalid campaigns patient'));
+			throw new NotFoundException(__d('CampaignsPatient', 'Invalid campaigns patient'));
 		}
 
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->CampaignsPatient->delete()) {
-			$this->Session->setFlash(__('Campaigns patient deleted'));
+			$this->Session->setFlash(__d('CampaignsPatient', 'Campaigns patient deleted'));
 			$this->redirect($this->referer());
 		}
-		$this->Session->setFlash(__('Campaigns patient was not deleted'));
+		$this->Session->setFlash(__d('CampaignsPatient', 'Campaigns patient was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
 
@@ -121,7 +121,7 @@ class CampaignsPatientsController extends AppController {
 */
 	public function ajax_searchPatients() {
 		if (!$this->request->is('post') || empty($this->request->data)) {
-			throw new NotFoundException(__('Invalid campaigns patient'));
+			throw new NotFoundException(__d('CampaignsPatient', 'Invalid campaigns patient'));
 		}
 
 		$campaign_id = $this->request->data['CampaignsPatient']['campaign_id'];
@@ -157,7 +157,7 @@ class CampaignsPatientsController extends AppController {
 
 	private function __formatCheckboxData($campaignPatients = array()) {
 		if (empty($campaignPatients)) {
-			throw new NotFoundException(__('Invalid campaigns patient'));
+			throw new NotFoundException(__d('CampaignsPatient', 'Invalid campaigns patient'));
 		}
 		
 		if (!array_key_exists('patient_id', $campaignPatients['CampaignsPatient'])) {
