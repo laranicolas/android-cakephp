@@ -5,7 +5,7 @@ echo $this->Html->script(array('jquery/jquery.datepicker/l10n/jquery.ui.datepick
 $action = router::url(array('controller' => 'posts', 'action' => 'availableDates'), true);
 $jsaction = json_encode($action);
 
-$imageUrl = $this->request->webroot . 'app/webroot/img/calendar2.gif';
+$imageUrl = $this->request->webroot . 'img/calendar2.gif';
 $jsimageUrl = json_encode($imageUrl);
 
 echo $this->Html->scriptBlock(

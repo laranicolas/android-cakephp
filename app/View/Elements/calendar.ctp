@@ -2,7 +2,7 @@
 echo $this->Html->css(array('jquery/smoothness/jquery-ui-1.10.3.custom.min'));
 echo $this->Html->script(array('jquery/jquery.datepicker/l10n/jquery.ui.datepicker-es'));
 
-$imageUrl = $this->request->webroot . 'app/webroot/img/calendar2.gif';
+$imageUrl = $this->request->webroot . 'img/calendar2.gif';
 $jsimageUrl = json_encode($imageUrl);
 
 echo $this->Html->scriptBlock(
