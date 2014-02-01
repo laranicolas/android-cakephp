@@ -96,3 +96,37 @@
 		</ul>
 	</div>
 </div>
+<div class="related">
+	<h3><?= __d('Sm', 'Sms')?></h3>
+	<?php if (!empty($patient['Sm'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?= __d('CampaignsPatient', 'Id')?></th>
+		<th><?= __d('CampaignsPatient', 'Patient')?></th>
+		<th><?= __d('Sm', 'Mensaje')?></th>
+		<th><?= __d('Sm', 'Horario de LLegada')?></th>
+		<th class="actions"><?= __('Actions')?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($patient['Sm'] as $sm): ?>
+		<tr>
+			<td><?= $sm['id']?></td>
+			<td><?= $patient['Patient']['name'] . ' ' . $patient['Patient']['surname']?></td>
+			<td><?= $sm['text']?></td>
+			<td><?= $sm['created']?></td>
+			<td class="actions">
+				<?=
+					$this->Form->postLink(
+						__('Delete'),
+						array('controller' => 'sms', 'action' => 'delete', $sm['id']),
+						array('class' => 'btn btn-danger btn-small'),
+						__('Are you sure you want to delete # %s?', $sm['id'])
+					)
+				?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+</div>
