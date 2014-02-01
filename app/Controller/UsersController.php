@@ -30,6 +30,7 @@ class UsersController extends AppController {
 	// 	$this->Acl->allow($group, 'controllers/Patients');
 	// 	$this->Acl->allow($group, 'controllers/Campaigns');
 	// 	$this->Acl->allow($group, 'controllers/CampaignsPatients');
+	// 	$this->Acl->allow($group, 'controllers/Sms/delete');
 
 	// 	// Allow users to only view actions
 	// 	$group->id = 3;
