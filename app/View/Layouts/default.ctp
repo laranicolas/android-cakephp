@@ -27,7 +27,7 @@ $cakeDescription = __('SMS Panel');
 		<?=$title_for_layout?>
 	</title>
 	<?=$this->Html->charset()?>
-	<?= $this->Html->meta('sms.ico', 'sms.ico', array('type' => 'icon'))?>
+	<?= $this->Html->meta('message.ico', 'message.ico', array('type' => 'icon'))?>
 	<?=$this->fetch('meta')?>
 
 	<?=$this->Html->css(array(
