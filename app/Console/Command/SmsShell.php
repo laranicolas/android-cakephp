@@ -13,14 +13,18 @@ class SmsShell extends AppShell {
 	public $uses = array('Campaign');
 
 	public function main() {
-		$ClientSoap = $this->Tasks->load('ClientSoap');
 		
+		// Use soap client (Tween)
+		//$ClientSoap = $this->Tasks->load('ClientSoap');
+
+		$ClientAndroid = $this->Tasks->load('ClientAndroid');
+
 		if (!$data = $this->__getData()) {
 			CakeLog::write('activity', 'Ningún mensaje fue enviado durante este lapso de tiempo.');
 			return;
 		}
 
-		if ($ClientSoap->sendMessage($data)) {
+		if ($ClientAndroid->sendMessage($data)) {
 			CakeLog::write('activity', 'Se enviaron mensajes durante este lapso de tiempo.');
 			return;
 		}

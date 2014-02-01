@@ -10,7 +10,7 @@ App::uses('CakeLogInterface', 'Log');
  */
 
 class ClientSoapTask extends Shell {
-	
+
 	public function __construct() {
 		$options = array(
 			'exceptions' => true,
@@ -32,7 +32,7 @@ class ClientSoapTask extends Shell {
 **/
 	public function sendMessage($data) {
 		$messages = $this->__prepareMessage($data);
-		
+
 		$parametersDefault = array(
 			'compania' => '5', // Tween then send to a properly company.
 			'pass' => 'atiliotest',
