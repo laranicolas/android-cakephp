@@ -110,10 +110,23 @@ class Patient extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Sm' => array(
+			'className' => 'Sm',
+			'foreignKey' => 'patient_id',
+			'dependent' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
 
-	public function beforeSave() {
+	public function beforeSave($options = array()) {
 		if (!empty($this->data['Patient']['hour'])) {
 			$this->data['Patient']['hour'] .= ':00';
 		}
