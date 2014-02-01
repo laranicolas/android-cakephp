@@ -95,6 +95,7 @@ class AppSchema extends CakeSchema {
 		'surname' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8mb4_unicode_ci', 'charset' => 'utf8mb4'),
 		'code' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
 		'cellular' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 7, 'key' => 'index'),
+		//'company' => array('enum('Movistar', 'Claro', 'Personal', 'Nextel')', 'null' => false, 'default' => null, 'collate' => 'utf8mb4_unicode_ci', 'charset' => 'utf8mb4'),
 		'hour' => array('type' => 'time', 'null' => false, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
