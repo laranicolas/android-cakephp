@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/system/bin/sh
 TERM=dumb
 export TERM
 cmd="cake"
